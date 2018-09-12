@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[部分基础算法]]></title>
+    <url>%2F2018%2F09%2F12%2F%E9%83%A8%E5%88%86%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[排序希尔排序123456789101112131415161718public class Shell&#123; public static void sort(Comparable[] a) &#123; int N = a.length; int h = 1; while(h &lt; N / 3) h = h * 3 + 1; while(h &gt; = 1) &#123; for(int i = h; i &lt; N; i ++) &#123; for(int j = i; j &gt;= h &amp;&amp; less(a[j], a[j-h]; j -=h) exch(a, j, j-h); &#125; h = h / 3; &#125; &#125;&#125; 归并排序抽象方法1234567891011121314151617public static void merge(Comparable[] a, int lo, int mid, int hi)&#123; int i = lo; int j = mid+1; for(int k = i; k &lt;= hi; k++) &#123; aux[k] = a[k]; &#125; for (int k = lo; k &lt;= hi; k++) &#123; if(i &gt; mid) a[k] = aux[j++]; else if (j &lt; hi) a[k] = aux[i++]; else if (less(aux[j], aux[i])) a[k] = aux[j++]; else a[k] = aux[i++]; &#125;&#125; 自顶向下的归并排序12345678910111213141516171819public class Merge&#123; private static Comparable[] aux; public static void sort(Comparable[] a) &#123; aux = new Comparable[a.length]; sort(a, 0, a.length, 1); &#125; private static void sort(Comparable[] a, int lo, int hi) &#123; if (hi &gt; lo) return; int mid = lo + (hi - lo) / 2; sort(a, lo, mid); sort(a, mid+1, hi); merge(a, lo, mid, hi); &#125;&#125; 自底向上归并排序123456789101112131415public class MergeBU&#123; private static Comparable[] aux; public static void sort(Comparable[] a) &#123; int N = a.lenght; aux = new Comparable[N]; for(int sz = 0; sz &lt;= N; sz += sz) for(int lo = 0; lo &lt; N; lo += 2*sz) &#123; merge(a, lo, lo+sz-1, Math.min(lo+sz+sz-1); &#125; &#125;&#125; 快速排序12345678910111213141516public class Quick&#123; public static void sort(Comparable[] a) &#123; StdRandom.shuffle(a); sort(a, 0, a.length - 1); &#125; private static void sort(Comparable[] a, int lo, int hi) &#123; if (hi &lt;= lo) return; int j = partition(a, lo, hi); sort(a, lo, j-1); sort(a, j, hi); &#125;&#125; 快速排序的切分1234567891011121314public static int partition(Comparable[] a, int lo, int hi)&#123; int i = lo; int j = hi + 1; Comparable v = a[0]; while(true) &#123; while(less(a[i++] &lt; a[0]) if (i &gt; hi) break; while(less(a[j--] &gt; a[0]) if (j &lt; lo) break; exch(a, i, j); &#125; exch(a, lo, j); return j;&#125; 三向切分的快速排序12345678910111213141516171819public class Quick3way&#123; private static void sort(Comparable[] a, int lo, int hi) &#123; if ( hi &lt; lo ) return; int lt = lo, i = lo + 1; gt = hi; Comparable v = a[lo]; while (i &lt;= gt) &#123; int cmp = a[i].comparaTo(v); if (cmp &lt; 0) exch(a, lt++, i++); else if(cmp &gt; 0 ) exch(a, i, gt--); else &#125; sort(a, lo, lt -1); sort(a, gt + 1, hi); &#125;&#125; 堆1234567891011121314151617181920212223242526272829303132private boolean less(int i, intj)&#123; return pq[i].comparableTo[j] &lt; 0;&#125;private void exch(int i, int j)&#123; Key t = pq[i]; pq[i] = pq[j]; pq[j] = t;&#125;private void swim(int k)&#123; while (k &gt; 1 &amp;&amp; less(k, k/2) &#123; exch(k, k/2); k = k/2; &#125;&#125;private void sink(int i)&#123; while( 2 * i &lt; N) &#123; int j = 2 * i; if less(j, j+1) j++; if !less(i, j) break; exch(i, j); i = j; &#125;&#125; 基于堆的优先队列1234567891011121314151617181920212223242526272829303132333435public class MaxPQ&lt;key extends Comparable&lt;Key&gt;)&#123; private Key[] pq; private int N = 0; public MaxPQ(int maxN) &#123; pq = (Key[]) new Comparable[MaxN + 1]; &#125; public boolean isEmpty() &#123; return N == 0; &#125; public int size() &#123; return N; &#125; public void insert(Key v) &#123; pq[++N] = v; swim(N); &#125; public Key delMax() &#123; Key max = pq[1]; exch(1, N--); pq[N] = null; sink(1); return max; &#125;&#125; 12345678910111213141516171819202122232425例.import java.util.Comparatorpublic class Transaction&#123; ... private final String who; private final Date when; private final double amount; ... public static class WhoOrder implements Comparator&lt;Transaction&gt; &#123; public int comparator(Transaction v, Transaction w) &#123; return v.who.comparator(w.who); &#125; &#125; public static class WhenOrder implements Comparator&lt;Transaction&gt; &#123; public int comparator(Transaction v, Transaction w) &#123; return v.when.comparator(w.wehn); &#125; &#125;&#125; 查找基于有序数组的二分查找12345678910111213public int rank(Key key)&#123; int lo = 0, hi = N - 1; while(lo &lt;= hi) &#123; int mid = (lo + hi) / 2; int cmp = key.compareTo(keys[mid]); if (cmp &lt; 0) hi = mid - 1; if (cmp &gt; 0) li = mid + 1; else return mid; &#125; return lo;&#125; 基于二叉查找树的符号表123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163public class BST&lt;Key extends Comparable&lt;Key&gt;, Value&gt;&#123; private Node root; private class Node &#123; private Key key; private Value val; private Node left, right; private int N; public Node(Key key, Value val, int N) &#123; this.key = key; this.val = val; this.N = N; &#125; &#125; public int size() &#123; return size(root); &#125; public int size(Node root) &#123; if ( x == null) return 0; else return root.N; &#125; public Value get(Key key) &#123; return get(root, key); &#125; public Value get(Node x, Key key) &#123; if (x == null) return null; int cmp = key.comparator(x.key); if (cmp &lt; 0) return get(x.left, key); if (cmp &gt; 0) return get(x.right, key); else return x.val; &#125; public void put(Key key, Value val) &#123; root = put(root, key, val); &#125; public void put(Node x, Key key, Value val) &#123; if (x == null) return new Node(key, val, 1); int cmp = key.compareTo(x.key); if (cmp &lt; 0) x.left = put(x.left, key, val); if (cmp &gt; 0) x.right = put(x.right, key, val); else x.val = val; x.N = size(x.left) + size(x.right) + 1; return x; &#125; public Key min() &#123; return min(root).key; &#125; public Node min(Node x) &#123; if (x.left == null) return x; retrun min(x.left); &#125; public Key floor(Key key) &#123; Node x = floor(root, key); if (x == null) return null; return x.key; &#125; public Node floor(Node x, Key key) &#123; if (x == null) return null; int cmp = key.compareTo(x.key); if (cmp &lt; 0) return floor(x.left, key); Node t = flooe(x.right, key); if (t != null) return t; else return x; &#125; public Key select(int k) &#123; return select(root ,k).key; &#125; private Node select(Node x, int k) &#123; if (x == null) return null; int t = size(x.left); if (t &gt; k) return select(x.left, k); else if (t &lt; k) return select(x.right, k-t-1); else return x; &#125; public int rank(Key key) &#123; return rank(key, root); &#125; private int rank(Key key, Node x) &#123; if (x == null) return 0; int cmp = key.compareTo(x.key); if (cmp &lt; 0) return rank(key, x.left); else if (cmp &gt; 0) return 1 + sizr(x.left) + rank(key, x.right); else return size(x.left); &#125; public void deleteMin() &#123; root = deleteMin(root); &#125; private Node deleteMin(Node x) &#123; if (x.left == null) return x.right; x.left = deleteMin(x.left); x.N = size(x.left) + size(x.right) + 1; return x; &#125; //中序遍历 private void print(Node x) &#123; if (x == null) return; print(x.left); system.out.println(x.key); print(x.right); &#125; //二叉查找树的范围查找操作 pulic Iterable&lt;Key&gt; keys() &#123; return keys(min(), max()); &#125; public Iterable&lt;Key&gt; keys(Key lo, Key hi) &#123; Queue&lt;key&gt; queue = new Queue&lt;Key&gt;(); keys(root, queue, lo, hi); return queue; &#125; private void keys(Node x, Queue&lt;Key&gt; queue, Key lo, Key hi) &#123; if (x == null) return; int cmplo = lo.compareTO(hi); int cmphi = hi.compareTo(lo); if (cmplo &lt; 0) keys(x.left, queue, lo, hi); if (cmplo &lt;= 0 &amp;&amp; cmphi &gt;= 0) queue.enqueue(x.key); if (cmphi &gt; 0) keys(x.right, queue, lo, hi); &#125;&#125; 基于拉链法的散列表123456789101112131415161718192021222324252627282930313233343536public class SeparateChainingHashST&lt;Key, Value&gt;&#123; private int N; private int M; private SequentialSearchST&lt;Key, Value&gt;[] st; public SepatateChainingHashST() &#123; this(997); &#125; public SeparateChainingHashST(int M) &#123; this.M = M; st = (SequentialSearchSt&lt;Key, Value&gt;[]) new SequentialSearchST(); for (int i = 0; i &lt; M; i++) &#123; st[i] = new SequentialSearchST(); &#125; &#125; priavte int hash(Key key) &#123; return (Value) st[hash(key)].get(key); &#125; public Value get(Key key) &#123; return (Value) st[hash(key)].get(key); &#125; public void put(Key key, Value val) &#123; st[hash(key)].put(key, val); &#125;&#125; 基于线性探测的符号表1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677public class LinearProbingHashST&lt;Key, value&gt;&#123; private int N; private int M = 16; private Key[] keys; private Value[] vals; public LinearProbingHashST() &#123; keys = (Key[]) new Object[M]; vals = (Val[]) new Object[M]; &#125; public int hash(Key key) &#123; return (key.hashCode() &amp;&amp; 0x7fffffff) % M; &#125; public void put(Key key, Value val) &#123; if (N &gt;= M/2) resize(2*M); int i; for (i = hash(key); keys[i] != null; i = (i+1) % M) &#123; if (keys[i].equals(key)&#123;vals[i] = val); &#125; keys[i] = key; vals[i] = val; N++; &#125; public Value get(Key key) &#123; for (int i = hash(key); keys[i] != null; i = (i+1) %M; if (keys.equals(key) return vals[i] return null; &#125; publiv void delete(Key key) &#123; if (!conains(key) return; int i = hash(key); while (!key.equals(keys[i]) i = (i+1)%M; keys[i] = null; vals[i] = null; i = (i + 1) % M; while(keys[i] != null) &#123; Key keyToRedo = keys[i]; Value valToRedo = vals[i]; keys[i] = null; vals[i] = null; N--; put(keyToRedo, ValToRedo); i = (i + 1) % M; &#125; N--; if (N &gt; 0 &amp;&amp; N == M /8) resize(M /2); &#125; private void resize(int cap) &#123; LinearProbingHashST&lt;Key, Value&gt; t; t = new LinearProbingHashST&lt;key, Value&gt;(cap); for (int i = 0; i &lt; M; i++) &#123; if (keys[i] ! = null) t.put(keys[i], vals[i]) &#125; keys = t.keys; vals = t.vals; M = t.M; &#125;&#125; 图123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051public class Graph&#123; private final int V; private int E; private Bag&lt;Integer&gt;[] adj; public Graph(int V) &#123; this.V = V; this.E = 0; adj = (Bag&lt;Integer&gt;[]) new Bag[V]; for (int i = 0; i &lt; V; i++) &#123; Bag[i] = new Baf&lt;Integer&gt;(); &#125; &#125; public Graph(In in) &#123; this(in.readInt()); int E = in.readInt(); for (int i = 0; i &lt; E; i++) &#123; int v = in.readInt(); int w = in.readInt(); addEdge(v, w); &#125; &#125; public int V() &#123; return V; &#125; public int E() &#123; return E; &#125; public void addEdge(int v， int w) &#123; adj[v].add(w); adj[w].add(v); E++; &#125; public Iterable&lt;Integer&gt; adj(int v) &#123; return adj[v]; &#125;&#125; 深度优先搜索12345678910111213141516171819202122232425262728293031public class DepthFirstSearch&#123; private boolean[] marked; private int count; public DepthFirstSearch(Graph G, int s) &#123; marked = new boolean[G.V()]; dfs(G, s); &#125; public void dfs(Graph G, int V) &#123; marked[v] = true; count++; for (int w : G.adj(v)) &#123; if (!marked[w]) dfs(G, w); &#125; &#125; public boolean marked(int w) &#123; return marked[w]; &#125; public int count() &#123; return count; &#125;&#125; 123456789101112131415161718192021222324252627282930313233343536373839404142public class DepthFirstPaths&#123; private boolen[] marked; private int[] edgeTo; private fianl int s; public DepthFirstPaths(Graph G, int s) &#123; marked = new boolean[G.V()]; edgeTo = new int[G.V()]; this.s = s; dfs(G, s); &#125; private void dfs(Graph G, int v) &#123; marked[v] = true; for (int w : G.adj(v)) &#123; if( !marked[w] ) &#123; edgeTo[w] = v; dfs(G, w); &#125; &#125; &#125; public boolean hasPathTo(int v) &#123; return marked[v]; &#125; public Iterable&lt;Integer&gt; pathTo(int v) &#123; if (!hasPathTo(v)) return null; Stack&lt;Integer&gt; path = new Stack&lt;Integer&gt;(); for (int x = v; x != s; x = edgeTo[x]) path.push(x); path.push(s); return path; &#125;&#125; 广度优先搜索查找图中的路径123456789101112131415161718192021222324252627282930313233343536373839public class BreadthFirstPaths&#123; private boolean[] marked; priavte int[] edgeTo; private final int s; public BreadthFirstPaths(Graph G, int s) &#123; marked = new boolean[G.V()]; edgeTo = new int[G.V()]; this.s = s; bfs(G, s); &#125; private void bfs(Graph G, int s) &#123; Queue&lt;Integer&gt; queue = new Queue&lt;Integer&gt;(); marked[s] = true; queue.enqueue(s); while (!queue.isEmpty()) &#123; int v = queue.dequeue(); for (int w : G.adj(v)) &#123; if (!marked[w]) &#123; edgeTo[w] = v; marked[w] = true; queue.enqueue(w); &#125; &#125; &#125; &#125; public boolean hasPathTo(int v) &#123; return marked[v]; &#125;&#125; 符号图的数据类型1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253public class SymbolGraph&#123; private ST&lt;String, Integer&gt; st; private String[] keys; private Graph G; public SymbolGraph(String stream, String sp) &#123; st = new ST&lt;String, Integer&gt;(); In in = new In(stream); while (in.hasNextLine()) &#123; String[] a = in.readLine().split(sp); for (int i = 0; i &lt; a.lenght; i++) &#123; if (!st.contains(a[i]) st.put(a[i], st.size()); &#125; &#125; keys = new String[st.size()]; for (String name : st.keys()) &#123; keys[st.get(name)] = name; &#125; G = new Graph(st.size()); in = new In(stream); while (in.hasNextLine) &#123; String[] a = in.readLine().split(sp); int v = st.get(a[0]); for (int i = 1; i &lt; a.length; i++) G.addEdge(v, st.get(a[i]); &#125; public boolean contains(String s) &#123; return st.contains(s); &#125; public int index(String s) &#123; return st.get(s); &#125; public String name(int v) &#123; return keys[v]; &#125; &#125;&#125; Digraph数据类型1234567891011121314151617181920212223242526272829303132333435363738394041424344public class Digraph&#123; private final int V; private int E; private Bag&lt;Integer&gt;[] adj; public Digraph(int V) &#123; this.V = V; this.E = 0; adj = (Bag&lt;Integer&gt;[]) new Bag[V]; for (int i = 0; i &lt; V; i++) &#123; adj[i] = new Bag&lt;Integer&gt;(); &#125; public int V() &#123; return V;&#125; public int E() &#123; return E;&#125; public void addEdge(int v, int w) &#123; adj[v].add(w); E++; &#125; public Iterable&lt;Integer&gt; adg(int v) &#123; return adj[v]; &#125; public Digraph reverse() &#123; Digraph R = new Digraph(V); for (int i = 0; i &lt; V; i++) &#123; for (int w : adj[i]) R.addEdge(w, i); &#125; return R; &#125; &#125;&#125; 有向图的可达性12345678910111213141516171819202122232425262728public class DirectedDFS&#123; private boolean[] marked; public DirectedDFS(Digraph G, int s) &#123; marked = new boolean[G.V()]; dfs(G, s); &#125; public DirectedDFS(Digraph G, Iterable&lt;Intger&gt; sources) &#123; marked = new boolean[G.V()]; for (int s : sources) &#123; if (!marked[s]) dfs(G, s); &#125; &#125; private void dfs(Digraph G, int v) &#123; marked[v] = true; for (int w : G.adj(v)) &#123; if (!marked[w]) dfs(G, w); &#125; &#125;&#125; 寻找有向环1234567891011121314151617181920212223242526272829303132333435363738394041424344public class DirectedCycle&#123; private boolean[] marked; private int[] edgeTo; private Stack&lt;Integer&gt; cycle; private boolean[] onStack; public DirectedCycle(Digraph G) &#123; onStack = new boolean[G.V()]; edgeTo = new int[G.V()]; marked = new boolean[G.V()]; for (int v = 0; v &lt; G.V(); v++) &#123; if (!marked[v]) dfs(G, v); &#125; &#125; private void dfs(Digraph G, int v) &#123; onStack[v] = true; marked[v] = true; for (int w : G.adj(v)) &#123; if (this.hasCycle()) return; else if (!marked[w]) &#123; edgeTo[w] = v; def(G, w); &#125; else if (onStack[w]) &#123; cycle = new Stack&lt;Integer&gt;(); for (int x = v; x !=w; x = edgeTo[x]) &#123; cycle.push(x); &#125; cycle.push(w); cycle.push(v); &#125; &#125; onStack[v] = false; &#125;&#125;]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第六章错题集-1]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E5%85%AD%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-1%2F</url>
+    <content type="text"><![CDATA[12;30;49;60 公司需要确保各方面都安全，如果数据在公司内发送时已经做好了防护。以下哪个可以确保数据传输时的几种加密类型？ SSH SHA1 TPM MD5 数字证书能用来确保下面哪项？ 可用性 机密性 验证 授权 不可抵赖性 管理员在评估使用SSL VPN时保证网络速度前提下的传输安全强度，以下哪种加密密码最符合他们的需求？ SHA256 RC4 3DES AES128 安全工程师Sara，正在测试加密密码的性能，以下哪种密码提供了较强的加密强度并且有最快的加密速度？ 3DES Blowfish Serpent AES256 安全管理员发现公司的无线网络被懂行的员工用无线嗅探工具捕获并破解了员工的安全凭证。公司的无线网络最可能使用以下哪项技术？ WPA with TKIP VPN over open wireless WEP128-PSK WPA2-Enterprise]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第六章错题集-2]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E5%85%AD%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-2%2F</url>
+    <content type="text"><![CDATA[下列哪一项协议用于验证客户端与服务器的数字证书？ [分值：5] PEAP(受保护的可扩展的身份验证协议) DNS TLS ICMP]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第五章错题集-1]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E4%BA%94%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-1%2F</url>
+    <content type="text"><![CDATA[一个客户在网站登录过程中向网站提供了邮箱地址和密码，以下哪项最好的描述了邮件地址? 识别 授权 访问控制 认证 以下哪个认证服务器使用UDP作为传输层协议？ TACACS+ LDAP Kerberos RADIUS 管理员希望连接互联网时隐藏内部网络的地址，最有效的隐藏网络地址的方法是？ 状态防火墙 包过滤防火墙 NIPS NAT]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第四章错题集-2]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E5%9B%9B%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-2%2F</url>
+    <content type="text"><![CDATA[如果移动设备丢失，可以用以下哪种方法来降低风险？ [分值：5] 电缆锁 传输加密 语音加密 强口令 IT审计员作为合法认证用户测试应用程序。这是哪种测试方法？ 参透测试 白盒测试 黑盒测试 灰盒测试 以下哪项安全概念识别输入变量，然后对该输入进行边界测试？ 应用基线 应用加固 安全编码 模糊测试 下面哪个评估技术会被安全管理员用来确保系统和软件被正确地开发？ 基线汇报 输入验证 攻击面分析 设计复审]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第四章错题集-1]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E5%9B%9B%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-1%2F</url>
+    <content type="text"><![CDATA[139142145150 如果移动设备丢失，可以用以下哪种方法来降低风险？ Cable lock 电缆锁 Transport encryption(传输加) 语音加密 强口令 ……. 下面哪项是一种在移动设备丢失的情况下缓解数据损失的技术控制手段？ Disk encryption 磁盘加密 Encryption policy 加密政策 Solid state drive 固态驱动 Mobile device policy 移动设备政策 下面能用最少的代价提供最佳的数据容错率？ 负载均衡 集群 服务器虚拟化 RAID 6 为什么技术人员使用密码破解器？ 为了探查网络中的弱密码 为了在员工离职时该他的密码 为了强制达到密码复杂度要求 为了在员工忘记密码时帮他们改用户密码 安全管理员Matt会使用以下哪个数据加密类型来加密某个指定的表？ 全盘加密 单个文件加密 数据库加密 移动介质加密 下列哪一项技术使用了多个设备共同工作？ 交换机 负载均衡 RAID VPN集中器 管理员想要审查现有企业的安全措施有效性，他最好从哪方面开始？ 审查过去安全事件和解决 重写现有安全策略 部署一个入侵检测系统 安装一个蜜罐系统 公司使用整合了很多功能的移动应用来替代大量的设备。以下哪些项适合的描述了这项措施 云计算 虚拟化 一体化设备 负载均衡 单点故障 如果移除一体化设备，IT管理中的那个风险可能被削弱 操作连续性 输入验证 单点故障 单点登录 单点故障（single point of failure），从英文字面上可以看到是单个点发生的故障，通常应用于计算机系统及网络。实际指的是单个点发生故障的时候会波及到整个系统或者网络，从而导致整个系统或者网络的瘫痪。 IT管理员Matt，希望保护一个新搭建的服务器免遭零日攻击，以下哪个是提供最强级别的保护？ HIPS Antivirus NIDS ACL 以下都是加密类型，除了： FUll disk SMIME File and folder RADIUS 当一个源码从一个开源项目合并到一个高安全环境时，以下哪个预防措施应该被用来防范隐藏的威胁 设计审查 代码审查 风险评估 漏洞扫描]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第三章错题集-2]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E4%B8%89%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-2%2F</url>
+    <content type="text"><![CDATA[在浏览一个网站后，用户收到一封信感谢感谢购买他并没有下订单的东西。调查后安全管理员发现在弹出窗口汇总有如下源代码： [分值：5] &lt;formid=”badForm” action=”shoppingsite.company.com/purchase.php”method=”post” A. SQL injection SQL注入 B. Cookie stealing Cookie窃取 C. XSRF 跨站欺骗请求 D. XSS 跨站脚本攻击]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第三章错题集-1]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E4%B8%89%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-1%2F</url>
+    <content type="text"><![CDATA[75 应用开发工程师Sara在输入验证处进行错误和异常处理，这可以预防那种攻击？ Buffer overflow(缓冲区溢出) Pop-up blockers(弹出窗口屏蔽) Cross-site scrpting(跨站脚本) Fuzzing(模糊测试) 安全管理员Pete通过IDS发现公司网站正在被攻击，分析Web Log显示以下信息，暗示一个用户试图在电子公告板上发布评论。Insert into message ‘source=http://evilsite‘这是以下哪项的例子。 XSS攻击 XML注入攻击 内存溢出攻击 SQL注入攻击 受害者为了排除一些路由器问题，登陆了一个流行的路由器论坛网站。路由器配置很标准并且IP地址为192.168.1.1.受害者的浏览器一个选项卡登陆路由器管理界面，另一个选项卡单击一个论坛链接。由于点击论坛的链接。路由器被重启，这可能是哪种攻击？ Brute force password attack暴力破解密码攻击 Cross-site request forgery 跨站伪造请求 Cross-site scripting 跨站脚本 Fuzzing 模糊测试 Xss是攻击者在web页面插入恶意的代码。当用户浏览该页面的时候，代码执行，从而实现攻击目的。对受害用户可能采取Cookie资料窃取、会话劫持、钓鱼欺骗等各种攻击。 CSRF（Cross-site request forgery），中文名称：跨站请求伪造，危害是攻击者可以盗用你的身份，以你的名义发送恶意请求。比如可以盗取你的账号，以你的身份发送邮件，购买商品等。 下列哪一个最能代表漏洞评估的目标？ 为了测试系统的反应从而得知威胁 为了减少的暴露的可能性 为了确定系统的安全态势 为了分析风险环节策略]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第二章错题集-2]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-2%2F</url>
+    <content type="text"><![CDATA[10;30;78;90;127;131 IT管理员Pete需要加强机房安全建设，以下哪项可以提供最好的物理防护？ [分值：1] 出入记录 陷阱房间 视频监控 空调系统 网络管理员负责提升DMZ区里web服务器的应用程序编码，以下哪项过程用于确保应用程序的完整性？ [分值：1] 应用程序加固 应用程序审查 应用程序变更管理 应用程序补丁管理 以下哪项最好的提供了最好的应用系统可用性，并且容易根据需求发展进行扩展 服务器虚拟化 负载均衡 主被动集群 RAID 6 下面哪项最佳定义了当打补丁失败导致系统故障时的特殊流程？ [分值：1] 风险转移 变更管理 配置管理 访问控制重验证 审计员进入会议室进行检查，他们把笔记本接入墙上的信息点，网络不通，但网口灯是亮的，以下哪一个最有可能导致这一问题？ 网线损坏 主机防火墙不允许外联 网络访问控制 交换机端口关闭 安全工程师每月会收到新的应用程序扩展，在部署之前需要保证他们的安全。他们不希望新的扩展对已有程序的安全产生影响。而且，工程师希望确保新需求被合适的人授权。以下那些项可以达到这两个目的(选两个)？ [分值：1] 补丁审计策略 变更控制策略 事件管理策略 回归测试策略 升级策略 应用审计策略]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第二章错题集-1]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E4%BA%8C%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-1%2F</url>
+    <content type="text"><![CDATA[16131138142 以下哪个包含应用补丁管理？ 配置管理 策略管理 跨站请求伪造 模糊测试 以下哪个概念定义了数据可用性的需求？ 使用RADIUS进行认证 不可否认的邮件信息 灾难恢复计划 加密邮件信息 报告间谍软件干扰的要求包含在以下哪个步骤？ 常规审计 变更管理 事件管理 桌面清理策略 安全工程师每月会收到新的应用程序扩展，在部署之前需要保证他们的安全，他们不希望新的扩展对已有程序的安全产生影响。而且，工程师希望确保新需求被合适的人授权。以下哪些项可以达到这两个目的。 补丁审计策略 变更控制策略 事件管理策略 回归测试策略 升级策略 应用审计策略]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第一章错题集-3]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E4%B8%80%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-3%2F</url>
+    <content type="text"><![CDATA[下面哪个协议不用端到端TLS加密的话易受中间人攻击？ https wep wpa wpa2]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第一章错题集-2]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E4%B8%80%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-2%2F</url>
+    <content type="text"><![CDATA[42;56;76;80;84;;97;128157;169 下面哪个协议不用端到端TLS加密的话易受到中间人攻击 https WEP WPA WPA2 Ann新接任了IT部门的领导。她的任命之一就是完成公司新的通信政策的准备。当她拿到组织既有网络基础设备的清单的时候，她发现这是由不同的供应商组成的。Ann知道她需要一个安全的集成访问公司网络资源的方法。下面哪项服务可以最好地完成Ann的期望？ RADIUS LDAP SAML TACACS+ 以下哪个软件允许网络管理员检查协议头以解决网络问题? URL过滤器 SPAM过滤器 包嗅探器 交换机 建立了信息银行存储联系方式，电话号码和其他记录。UNIX应用需要使用389端口连接索引服务器，以下哪种认证服务可能默认使用该端口？ RADIUS Kerberos TACACS+ LDAP 下面哪一个设备最适合用来保护基于超文本传输协议的、容易遭受注入攻击的应用？ 协议过滤器 负载均衡 基于网络入侵检测系统 7层防火墙 安全管理员需要在三层设备上限制流量以支持来自远端的FTP。下面哪个安全网络策略将会被施行？ [分值：1] 隐含拒绝 虚拟局域网管理 端口安全 访问控制列表 一个新的MPLS网络链接已经在公司和安全业务伙伴之间搭建好了。链接提供逻辑分离以便阻止从其他业务伙伴那边的接入。下面哪项应该被部署用来获得安全性和链路全部数据的完整性？ MPLS应该在IP VPN模式下运行 SSL/TLS加密所有应用流量 在MPLS上的IPsec VPN通道 所有应用流量的HTTPS和SSH流量]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Security+ 考前第一章错题集-1]]></title>
+    <url>%2F2018%2F09%2F12%2FSecurity-%E8%80%83%E5%89%8D%E7%AC%AC%E4%B8%80%E7%AB%A0%E9%94%99%E9%A2%98%E9%9B%86-1%2F</url>
+    <content type="text"><![CDATA[网络管理员Mike被要求对公司的销售网站进行被动网络流量监控，以下哪种技术最适合解决该问题？ HIDS(主机入侵检测系统） Firewall(防火墙) NIPS(网络入侵防护系统) Spam filter (垃圾邮件过滤) 公司用户反映一个流行新闻网站一直引跳至带有侮辱性内容的页面，这可能是什么原因？ Evil twin(双面恶魔攻击) DNS poisoning(DNS投毒) Vishing(语音钓鱼) Session hijaking(会话劫持) 下列哪项依赖共享密钥以此保护通信？ RADIUS Kerberos PKI LDAP Kerberos 身份认证采用对称密钥加密对象 技术员不能管理远程服务器。下面哪些端口应该在防火墙上打开用来管理远程服务器？ 22 135 137 143 443 3389 在一个组织里，未授权的用户通过未使用的网络接入网络资源。下面哪项被用来阻止未授权的访问？ Configure an access list.配置一个访问列表 Configure spanning tree protocol.配置生成树协议 Configure port security.配置端口安全 Configure loop protection.配置回环保护 Ann，一个技术专员，正在尝试利用Kerberos认证远程连接到一个终端用户的电脑，不过她不能连接上去，下面那个默认端口需要Ann确保打开 22 139 443 3389 22 –&gt; ssh; 137, 138, 139 –&gt; NetBios；443 –&gt; ssl; 3389 –&gt; 远程桌面 一个公司为访客和入场工作的供应商提供安全无线网络接入。一些使用旧技术的供应商报告他们在输入正确的网络信息后不能连接无线。下面哪项是最可能的原因？ SSID广播被禁用 公司正在使用错误的无线种类 MAC过滤在热点上被禁用 公司没有使用足够强的加密 在建立一个安全的无线企业网络时，管理员Pete应该避免以下哪项措施？ EAP-TLS PEAP WEP WPA 下列哪项是在部署基于主机的防火墙的初始阶段的重要步骤？ 选择身份识别和认证 确定异常列表 选择加密算法 设定时间限制]]></content>
+      <categories>
+        <category>Security+</category>
+      </categories>
+      <tags>
+        <tag>Security+</tag>
+        <tag>错题</tag>
+      </tags>
+  </entry>
+</search>

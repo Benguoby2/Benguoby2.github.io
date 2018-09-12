@@ -213,7 +213,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -223,7 +223,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -233,7 +233,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -243,9 +243,43 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -274,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/11/aa-1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/部分基础算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="GJYan">
@@ -293,7 +327,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/11/aa-1/" itemprop="url">aa</a></h1>
+                <a class="post-title-link" href="/2018/09/12/部分基础算法/" itemprop="url">部分基础算法</a></h1>
         
 
         <div class="post-meta">
@@ -305,8 +339,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-11T22:58:54+08:00">
-                2018-09-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:46:51+08:00">
+                2018-09-12
               </time>
             
 
@@ -367,7 +401,28 @@
       
         
           
-            <p>aaaaaa</p>
+            <h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Shell</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparable[] a)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> N = a.length;</span><br><span class="line">        <span class="keyword">int</span> h = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(h &lt; N / <span class="number">3</span>) h = h * <span class="number">3</span> + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(h &gt; = <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = h; i &lt; N; i ++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j = i; j &gt;= h &amp;&amp; less(a[j], a[j-h]; j -=h)</span><br><span class="line">                exch(a, j, j-h);</span><br><span class="line">            &#125;</span><br><span class="line">            h = h / <span class="number">3</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="抽象方法"><a href="#抽象方法" class="headerlink" title="抽象方法"></a>抽象方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(Comparable[] a, <span class="keyword">int</span> lo, <span class="keyword">int</span> mid, <span class="keyword">int</span> hi)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = lo;</span><br><span class="line">    <span class="keyword">int</span> j = mid+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k = i; k &lt;= hi; k++)</span><br><span class="line">    &#123;</span><br><span class="line">        aux[k] = a[k]; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> k = lo; k &lt;= hi; k++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(i &gt; mid) a[k] = aux[j++];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (j &lt; hi) a[k] = aux[i++];</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (less(aux[j], aux[i])) a[k] = aux[j++];</span><br><span class="line">        <span class="keyword">else</span> a[k] = aux[i++];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="自顶向下的归并排序"><a href="#自顶向下的归并排序" class="headerlink" title="自顶向下的归并排序"></a>自顶向下的归并排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Merge</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Comparable[] aux;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparable[] a)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        aux = <span class="keyword">new</span> Comparable[a.length];</span><br><span class="line">        sort(a, <span class="number">0</span>, a.length, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparable[] a, <span class="keyword">int</span> lo, <span class="keyword">int</span> hi)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (hi &gt; lo) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> mid = lo + (hi - lo) / <span class="number">2</span>;</span><br><span class="line">        sort(a, lo, mid);</span><br><span class="line">        sort(a, mid+<span class="number">1</span>, hi);</span><br><span class="line">        merge(a, lo, mid, hi);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="自底向上归并排序"><a href="#自底向上归并排序" class="headerlink" title="自底向上归并排序"></a>自底向上归并排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MergeBU</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Comparable[] aux;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparable[] a)</span></span></span><br><span class="line"><span class="function">    </span>&#123; </span><br><span class="line">        <span class="keyword">int</span> N = a.lenght;</span><br><span class="line">        aux = <span class="keyword">new</span> Comparable[N];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> sz = <span class="number">0</span>; sz &lt;= N; sz += sz)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> lo = <span class="number">0</span>; lo &lt; N; lo += <span class="number">2</span>*sz)</span><br><span class="line">            &#123;</span><br><span class="line">                merge(a, lo, lo+sz-<span class="number">1</span>, Math.min(lo+sz+sz-<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Quick</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparable[] a)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        StdRandom.shuffle(a);</span><br><span class="line">        sort(a, <span class="number">0</span>, a.length - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparable[] a, <span class="keyword">int</span> lo, <span class="keyword">int</span> hi)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (hi &lt;= lo) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> j = partition(a, lo, hi);</span><br><span class="line">        sort(a, lo, j-<span class="number">1</span>);</span><br><span class="line">        sort(a, j, hi);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="快速排序的切分"><a href="#快速排序的切分" class="headerlink" title="快速排序的切分"></a>快速排序的切分</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">partition</span><span class="params">(Comparable[] a, <span class="keyword">int</span> lo, <span class="keyword">int</span> hi)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = lo;</span><br><span class="line">    <span class="keyword">int</span> j = hi + <span class="number">1</span>;</span><br><span class="line">    Comparable v = a[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">while</span>(<span class="keyword">true</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span>(less(a[i++] &lt; a[<span class="number">0</span>]) <span class="keyword">if</span> (i &gt; hi) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">while</span>(less(a[j--] &gt; a[<span class="number">0</span>]) <span class="keyword">if</span> (j &lt; lo) <span class="keyword">break</span>;</span><br><span class="line">        exch(a, i, j);</span><br><span class="line">    &#125;</span><br><span class="line">    exch(a, lo, j);</span><br><span class="line">    <span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="三向切分的快速排序"><a href="#三向切分的快速排序" class="headerlink" title="三向切分的快速排序"></a>三向切分的快速排序</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Quick3way</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(Comparable[] a, <span class="keyword">int</span> lo, <span class="keyword">int</span> hi)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ( hi &lt; lo ) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> lt = lo, i = lo + <span class="number">1</span>; gt = hi;</span><br><span class="line">        Comparable v = a[lo];</span><br><span class="line">        <span class="keyword">while</span> (i &lt;= gt)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> cmp = a[i].comparaTo(v);</span><br><span class="line">            <span class="keyword">if</span> (cmp &lt; <span class="number">0</span>) exch(a, lt++, i++);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(cmp &gt; <span class="number">0</span> ) exch(a, i, gt--);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">        &#125;</span><br><span class="line">        sort(a, lo, lt -<span class="number">1</span>);</span><br><span class="line">        sort(a, gt + <span class="number">1</span>, hi);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">less</span><span class="params">(<span class="keyword">int</span> i, intj)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> pq[i].comparableTo[j] &lt; <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">exch</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Key t = pq[i];</span><br><span class="line">    pq[i] = pq[j];</span><br><span class="line">    pq[j] = t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">swim</span><span class="params">(<span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (k &gt; <span class="number">1</span> &amp;&amp; less(k, k/<span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        exch(k, k/<span class="number">2</span>);</span><br><span class="line">        k = k/<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">sink</span><span class="params">(<span class="keyword">int</span> i)</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">while</span>( <span class="number">2</span> * i &lt; N)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> j = <span class="number">2</span> * i;</span><br><span class="line">        <span class="function"><span class="keyword">if</span> <span class="title">less</span><span class="params">(j, j+<span class="number">1</span>)</span> j++</span>;</span><br><span class="line">        <span class="keyword">if</span> !less(i, j) <span class="keyword">break</span>;</span><br><span class="line">        exch(i, j);</span><br><span class="line">        i = j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="基于堆的优先队列"><a href="#基于堆的优先队列" class="headerlink" title="基于堆的优先队列"></a>基于堆的优先队列</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MaxPQ</span>&lt;<span class="title">key</span> <span class="keyword">extends</span> <span class="title">Comparable</span>&lt;<span class="title">Key</span>&gt;)</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Key[] pq;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> N = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MaxPQ</span><span class="params">(<span class="keyword">int</span> maxN)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        pq = (Key[]) <span class="keyword">new</span> Comparable[MaxN + <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> N == <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(Key v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        pq[++N] = v;</span><br><span class="line">        swim(N);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Key <span class="title">delMax</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Key max = pq[<span class="number">1</span>];</span><br><span class="line">        exch(<span class="number">1</span>, N--);</span><br><span class="line">        pq[N] = <span class="keyword">null</span>;</span><br><span class="line">        sink(<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">例.</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Transaction</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String who;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Date when;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">double</span> amount;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">WhoOrder</span> <span class="keyword">implements</span> <span class="title">Comparator</span>&lt;<span class="title">Transaction</span>&gt;</span></span><br><span class="line"><span class="class">    </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">comparator</span><span class="params">(Transaction v, Transaction w)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> v.who.comparator(w.who);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">WhenOrder</span> <span class="keyword">implements</span> <span class="title">Comparator</span>&lt;<span class="title">Transaction</span>&gt;</span></span><br><span class="line"><span class="class">    </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">comparator</span><span class="params">(Transaction v, Transaction w)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> v.when.comparator(w.wehn);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><h2 id="基于有序数组的二分查找"><a href="#基于有序数组的二分查找" class="headerlink" title="基于有序数组的二分查找"></a>基于有序数组的二分查找</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rank</span><span class="params">(Key key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> lo = <span class="number">0</span>, hi = N - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(lo &lt;= hi)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (lo + hi) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> cmp = key.compareTo(keys[mid]);</span><br><span class="line">        <span class="keyword">if</span> (cmp &lt; <span class="number">0</span>) hi = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (cmp &gt; <span class="number">0</span>) li = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> lo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="基于二叉查找树的符号表"><a href="#基于二叉查找树的符号表" class="headerlink" title="基于二叉查找树的符号表"></a>基于二叉查找树的符号表</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BST</span>&lt;<span class="title">Key</span> <span class="keyword">extends</span> <span class="title">Comparable</span>&lt;<span class="title">Key</span>&gt;, <span class="title">Value</span>&gt;</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Node root;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span></span></span><br><span class="line"><span class="class">    </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> Key key;</span><br><span class="line">        <span class="keyword">private</span> Value val;</span><br><span class="line">        <span class="keyword">private</span> Node left, right;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> N;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Node</span><span class="params">(Key key, Value val, <span class="keyword">int</span> N)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.key = key;</span><br><span class="line">            <span class="keyword">this</span>.val = val;</span><br><span class="line">            <span class="keyword">this</span>.N = N;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> size(root);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">(Node root)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ( x == <span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> root.N;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Value <span class="title">get</span><span class="params">(Key key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> get(root, key);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Value <span class="title">get</span><span class="params">(Node x, Key key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">int</span> cmp = key.comparator(x.key);</span><br><span class="line">        <span class="keyword">if</span> (cmp &lt; <span class="number">0</span>) <span class="keyword">return</span> get(x.left, key);</span><br><span class="line">        <span class="keyword">if</span> (cmp &gt; <span class="number">0</span>) <span class="keyword">return</span> get(x.right, key);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> x.val;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(Key key, Value val)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        root = put(root, key, val);    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(Node x, Key key, Value val)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">new</span> Node(key, val, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> cmp = key.compareTo(x.key);</span><br><span class="line">        <span class="keyword">if</span> (cmp &lt; <span class="number">0</span>) x.left = put(x.left, key, val);</span><br><span class="line">        <span class="keyword">if</span> (cmp &gt; <span class="number">0</span>) x.right = put(x.right, key, val);</span><br><span class="line">        <span class="keyword">else</span> x.val = val;</span><br><span class="line">        x.N = size(x.left) + size(x.right) + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Key <span class="title">min</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> min(root).key;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">min</span><span class="params">(Node x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x.left == <span class="keyword">null</span>) <span class="keyword">return</span> x;</span><br><span class="line">        <span class="function">retrun <span class="title">min</span><span class="params">(x.left)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Key <span class="title">floor</span><span class="params">(Key key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Node x = floor(root, key);</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> x.key;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">floor</span><span class="params">(Node x, Key key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">int</span> cmp = key.compareTo(x.key);</span><br><span class="line">        <span class="keyword">if</span> (cmp &lt; <span class="number">0</span>) <span class="keyword">return</span> floor(x.left, key);</span><br><span class="line">        Node t = flooe(x.right, key);</span><br><span class="line">        <span class="keyword">if</span> (t != <span class="keyword">null</span>) <span class="keyword">return</span> t;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Key <span class="title">select</span><span class="params">(<span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> select(root ,k).key;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> Node <span class="title">select</span><span class="params">(Node x, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">int</span> t = size(x.left);</span><br><span class="line">        <span class="keyword">if</span> (t &gt; k) <span class="keyword">return</span> select(x.left, k);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (t &lt; k) <span class="keyword">return</span> select(x.right, k-t-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rank</span><span class="params">(Key key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> rank(key, root);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">rank</span><span class="params">(Key key, Node x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> cmp = key.compareTo(x.key);</span><br><span class="line">        <span class="keyword">if</span> (cmp &lt; <span class="number">0</span>) <span class="keyword">return</span> rank(key, x.left);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (cmp &gt; <span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span> + sizr(x.left) + rank(key, x.right);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> size(x.left);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteMin</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        root = deleteMin(root);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> Node <span class="title">deleteMin</span><span class="params">(Node x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x.left == <span class="keyword">null</span>) <span class="keyword">return</span> x.right;</span><br><span class="line">        x.left = deleteMin(x.left);</span><br><span class="line">        x.N = size(x.left) + size(x.right) + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//中序遍历</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(Node x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        print(x.left);</span><br><span class="line">        system.out.println(x.key);</span><br><span class="line">        print(x.right);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//二叉查找树的范围查找操作</span></span><br><span class="line">    <span class="function">pulic Iterable&lt;Key&gt; <span class="title">keys</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> keys(min(), max());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterable&lt;Key&gt; <span class="title">keys</span><span class="params">(Key lo, Key hi)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Queue&lt;key&gt; queue = <span class="keyword">new</span> Queue&lt;Key&gt;();</span><br><span class="line">        keys(root, queue, lo, hi);</span><br><span class="line">        <span class="keyword">return</span> queue;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">keys</span><span class="params">(Node x, Queue&lt;Key&gt; queue, Key lo, Key hi)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> cmplo = lo.compareTO(hi);</span><br><span class="line">        <span class="keyword">int</span> cmphi = hi.compareTo(lo);</span><br><span class="line">        <span class="keyword">if</span> (cmplo &lt; <span class="number">0</span>) keys(x.left, queue, lo, hi);</span><br><span class="line">        <span class="keyword">if</span> (cmplo &lt;= <span class="number">0</span> &amp;&amp; cmphi &gt;= <span class="number">0</span>) queue.enqueue(x.key);</span><br><span class="line">        <span class="keyword">if</span> (cmphi &gt; <span class="number">0</span>) keys(x.right, queue, lo, hi);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="基于拉链法的散列表"><a href="#基于拉链法的散列表" class="headerlink" title="基于拉链法的散列表"></a>基于拉链法的散列表</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SeparateChainingHashST</span>&lt;<span class="title">Key</span>, <span class="title">Value</span>&gt;</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> N;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> M;</span><br><span class="line">    <span class="keyword">private</span> SequentialSearchST&lt;Key, Value&gt;[] st;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SepatateChainingHashST</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(<span class="number">997</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SeparateChainingHashST</span><span class="params">(<span class="keyword">int</span> M)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.M = M;</span><br><span class="line">        st = (SequentialSearchSt&lt;Key, Value&gt;[]) <span class="keyword">new</span> SequentialSearchST();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; M; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            st[i] = <span class="keyword">new</span> SequentialSearchST();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function">priavte <span class="keyword">int</span> <span class="title">hash</span><span class="params">(Key key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (Value) st[hash(key)].get(key);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Value <span class="title">get</span><span class="params">(Key key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (Value) st[hash(key)].get(key);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(Key key, Value val)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        st[hash(key)].put(key, val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="基于线性探测的符号表"><a href="#基于线性探测的符号表" class="headerlink" title="基于线性探测的符号表"></a>基于线性探测的符号表</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinearProbingHashST</span>&lt;<span class="title">Key</span>, <span class="title">value</span>&gt;</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> N;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> M = <span class="number">16</span>;</span><br><span class="line">    <span class="keyword">private</span> Key[] keys;</span><br><span class="line">    <span class="keyword">private</span> Value[] vals;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LinearProbingHashST</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        keys = (Key[]) <span class="keyword">new</span> Object[M];</span><br><span class="line">        vals = (Val[]) <span class="keyword">new</span> Object[M];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hash</span><span class="params">(Key key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (key.hashCode() &amp;&amp; <span class="number">0x7fffffff</span>) % M;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(Key key, Value val)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (N &gt;= M/<span class="number">2</span>) resize(<span class="number">2</span>*M);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> i;</span><br><span class="line">        <span class="keyword">for</span> (i = hash(key); keys[i] != <span class="keyword">null</span>; i = (i+<span class="number">1</span>) % M)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (keys[i].equals(key)&#123;vals[i] = val);</span><br><span class="line">        &#125;</span><br><span class="line">        keys[i] = key;</span><br><span class="line">        vals[i] = val;</span><br><span class="line">        N++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Value <span class="title">get</span><span class="params">(Key key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = hash(key); keys[i] != <span class="keyword">null</span>; i = (i+<span class="number">1</span>) %M;</span><br><span class="line">            <span class="keyword">if</span> (keys.equals(key)</span><br><span class="line">                <span class="keyword">return</span> vals[i]</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function">publiv <span class="keyword">void</span> <span class="title">delete</span><span class="params">(Key key)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!conains(key) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> i = hash(key);</span><br><span class="line">        <span class="keyword">while</span> (!key.equals(keys[i])</span><br><span class="line">            i = (i+<span class="number">1</span>)%M;</span><br><span class="line">        keys[i] = <span class="keyword">null</span>;</span><br><span class="line">        vals[i] = <span class="keyword">null</span>;</span><br><span class="line">        i = (i + <span class="number">1</span>) % M;</span><br><span class="line">        <span class="keyword">while</span>(keys[i] != <span class="keyword">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            Key keyToRedo = keys[i];</span><br><span class="line">            Value valToRedo = vals[i];</span><br><span class="line">            keys[i] = <span class="keyword">null</span>;</span><br><span class="line">            vals[i] = <span class="keyword">null</span>;</span><br><span class="line">            N--;</span><br><span class="line">            put(keyToRedo, ValToRedo);</span><br><span class="line">            i = (i + <span class="number">1</span>) % M;</span><br><span class="line">        &#125;</span><br><span class="line">        N--;</span><br><span class="line">        <span class="keyword">if</span> (N &gt; <span class="number">0</span> &amp;&amp; N == M /<span class="number">8</span>) resize(M /<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">resize</span><span class="params">(<span class="keyword">int</span> cap)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        LinearProbingHashST&lt;Key, Value&gt; t;</span><br><span class="line">        t = <span class="keyword">new</span> LinearProbingHashST&lt;key, Value&gt;(cap);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; M; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (keys[i] ! = <span class="keyword">null</span>)</span><br><span class="line">                t.put(keys[i], vals[i])</span><br><span class="line">        &#125;</span><br><span class="line">        keys = t.keys;</span><br><span class="line">        vals = t.vals;</span><br><span class="line">        M = t.M;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="图"><a href="#图" class="headerlink" title="图"></a>图</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Graph</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> V;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> E;</span><br><span class="line">    <span class="keyword">private</span> Bag&lt;Integer&gt;[] adj;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Graph</span><span class="params">(<span class="keyword">int</span> V)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.V = V;</span><br><span class="line">        <span class="keyword">this</span>.E = <span class="number">0</span>;</span><br><span class="line">        adj = (Bag&lt;Integer&gt;[]) <span class="keyword">new</span> Bag[V];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; V; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            Bag[i] = <span class="keyword">new</span> Baf&lt;Integer&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Graph</span><span class="params">(In in)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(in.readInt());</span><br><span class="line">        <span class="keyword">int</span> E = in.readInt();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; E; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> v = in.readInt();</span><br><span class="line">            <span class="keyword">int</span> w = in.readInt();</span><br><span class="line">            addEdge(v, w);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">V</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> V;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">E</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> E;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> v， <span class="keyword">int</span> w)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        adj[v].add(w);</span><br><span class="line">        adj[w].add(v);</span><br><span class="line">        E++;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterable&lt;Integer&gt; <span class="title">adj</span><span class="params">(<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> adj[v];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DepthFirstSearch</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span>[] marked;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DepthFirstSearch</span><span class="params">(Graph G, <span class="keyword">int</span> s)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        marked = <span class="keyword">new</span> <span class="keyword">boolean</span>[G.V()];</span><br><span class="line">        dfs(G, s);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(Graph G, <span class="keyword">int</span> V)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        marked[v] = <span class="keyword">true</span>;</span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> w : G.adj(v))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!marked[w]) dfs(G, w);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">marked</span><span class="params">(<span class="keyword">int</span> w)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> marked[w];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">count</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DepthFirstPaths</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> boolen[] marked;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] edgeTo;</span><br><span class="line">    <span class="keyword">private</span> fianl <span class="keyword">int</span> s;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DepthFirstPaths</span><span class="params">(Graph G, <span class="keyword">int</span> s)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        marked = <span class="keyword">new</span> <span class="keyword">boolean</span>[G.V()];</span><br><span class="line">        edgeTo = <span class="keyword">new</span> <span class="keyword">int</span>[G.V()];</span><br><span class="line">        <span class="keyword">this</span>.s = s;</span><br><span class="line">        dfs(G, s);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(Graph G, <span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        marked[v] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> w : G.adj(v))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>( !marked[w] )</span><br><span class="line">            &#123;</span><br><span class="line">                edgeTo[w] = v;</span><br><span class="line">                dfs(G, w);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathTo</span><span class="params">(<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> marked[v];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterable&lt;Integer&gt; <span class="title">pathTo</span><span class="params">(<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!hasPathTo(v)) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        Stack&lt;Integer&gt; path = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x = v; x != s; x = edgeTo[x])</span><br><span class="line">            path.push(x);</span><br><span class="line">        path.push(s);</span><br><span class="line">        <span class="keyword">return</span> path;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="广度优先搜索查找图中的路径"><a href="#广度优先搜索查找图中的路径" class="headerlink" title="广度优先搜索查找图中的路径"></a>广度优先搜索查找图中的路径</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BreadthFirstPaths</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span>[] marked;</span><br><span class="line">    priavte <span class="keyword">int</span>[] edgeTo;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> s;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BreadthFirstPaths</span><span class="params">(Graph G, <span class="keyword">int</span> s)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        marked = <span class="keyword">new</span> <span class="keyword">boolean</span>[G.V()];</span><br><span class="line">        edgeTo = <span class="keyword">new</span> <span class="keyword">int</span>[G.V()];</span><br><span class="line">        <span class="keyword">this</span>.s = s;</span><br><span class="line">        bfs(G, s);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">(Graph G, <span class="keyword">int</span> s)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Queue&lt;Integer&gt; queue = <span class="keyword">new</span> Queue&lt;Integer&gt;();</span><br><span class="line">        marked[s] = <span class="keyword">true</span>;</span><br><span class="line">        queue.enqueue(s);</span><br><span class="line">        <span class="keyword">while</span> (!queue.isEmpty())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> v = queue.dequeue();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> w : G.adj(v))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (!marked[w])</span><br><span class="line">                &#123;</span><br><span class="line">                    edgeTo[w] = v;</span><br><span class="line">                    marked[w] = <span class="keyword">true</span>;</span><br><span class="line">                    queue.enqueue(w);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathTo</span><span class="params">(<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> marked[v];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="符号图的数据类型"><a href="#符号图的数据类型" class="headerlink" title="符号图的数据类型"></a>符号图的数据类型</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SymbolGraph</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> ST&lt;String, Integer&gt; st;</span><br><span class="line">    <span class="keyword">private</span> String[] keys;</span><br><span class="line">    <span class="keyword">private</span> Graph G;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">SymbolGraph</span><span class="params">(String stream, String sp)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        st = <span class="keyword">new</span> ST&lt;String, Integer&gt;();</span><br><span class="line">        In in = <span class="keyword">new</span> In(stream);</span><br><span class="line">        <span class="keyword">while</span> (in.hasNextLine())</span><br><span class="line">        &#123;</span><br><span class="line">            String[] a = in.readLine().split(sp);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.lenght; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (!st.contains(a[i])</span><br><span class="line">                    st.put(a[i], st.size());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        keys = <span class="keyword">new</span> String[st.size()];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (String name : st.keys())</span><br><span class="line">        &#123;</span><br><span class="line">            keys[st.get(name)] = name;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        G = <span class="keyword">new</span> Graph(st.size());</span><br><span class="line">        in = <span class="keyword">new</span> In(stream);</span><br><span class="line">        <span class="keyword">while</span> (in.hasNextLine)</span><br><span class="line">        &#123;</span><br><span class="line">            String[] a = in.readLine().split(sp);</span><br><span class="line">            <span class="keyword">int</span> v = st.get(a[<span class="number">0</span>]);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; a.length; i++)</span><br><span class="line">                G.addEdge(v, st.get(a[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(String s)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> st.contains(s);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">index</span><span class="params">(String s)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> st.get(s);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">name</span><span class="params">(<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> keys[v];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Digraph数据类型"><a href="#Digraph数据类型" class="headerlink" title="Digraph数据类型"></a>Digraph数据类型</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Digraph</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> V;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> E;</span><br><span class="line">    <span class="keyword">private</span> Bag&lt;Integer&gt;[] adj;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Digraph</span><span class="params">(<span class="keyword">int</span> V)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.V = V;</span><br><span class="line">        <span class="keyword">this</span>.E = <span class="number">0</span>;</span><br><span class="line">        adj = (Bag&lt;Integer&gt;[]) <span class="keyword">new</span> Bag[V];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; V; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            adj[i] = <span class="keyword">new</span> Bag&lt;Integer&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">V</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> V;&#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">E</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> E;&#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addEdge</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> w)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            adj[v].add(w);</span><br><span class="line">            E++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> Iterable&lt;Integer&gt; <span class="title">adg</span><span class="params">(<span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> adj[v];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> Digraph <span class="title">reverse</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            Digraph R = <span class="keyword">new</span> Digraph(V);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; V; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> w : adj[i])</span><br><span class="line">                    R.addEdge(w, i);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> R;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="有向图的可达性"><a href="#有向图的可达性" class="headerlink" title="有向图的可达性"></a>有向图的可达性</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DirectedDFS</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span>[] marked;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DirectedDFS</span><span class="params">(Digraph G, <span class="keyword">int</span> s)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        marked = <span class="keyword">new</span> <span class="keyword">boolean</span>[G.V()];</span><br><span class="line">        dfs(G, s);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DirectedDFS</span><span class="params">(Digraph G, Iterable&lt;Intger&gt; sources)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        marked = <span class="keyword">new</span> <span class="keyword">boolean</span>[G.V()];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> s : sources)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!marked[s]) dfs(G, s);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(Digraph G, <span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        marked[v] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> w : G.adj(v))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!marked[w]) dfs(G, w);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="寻找有向环"><a href="#寻找有向环" class="headerlink" title="寻找有向环"></a>寻找有向环</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DirectedCycle</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span>[] marked;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] edgeTo;</span><br><span class="line">    <span class="keyword">private</span> Stack&lt;Integer&gt; cycle;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span>[] onStack;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DirectedCycle</span><span class="params">(Digraph G)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        onStack = <span class="keyword">new</span> <span class="keyword">boolean</span>[G.V()];</span><br><span class="line">        edgeTo = <span class="keyword">new</span> <span class="keyword">int</span>[G.V()];</span><br><span class="line">        marked = <span class="keyword">new</span> <span class="keyword">boolean</span>[G.V()];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> v = <span class="number">0</span>; v &lt; G.V(); v++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (!marked[v]) dfs(G, v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(Digraph G, <span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        onStack[v] = <span class="keyword">true</span>;</span><br><span class="line">        marked[v] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> w : G.adj(v))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.hasCycle()) <span class="keyword">return</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (!marked[w])</span><br><span class="line">            &#123;</span><br><span class="line">                edgeTo[w] = v;</span><br><span class="line">                def(G, w);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (onStack[w])</span><br><span class="line">            &#123;</span><br><span class="line">                cycle = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> x = v; x !=w; x = edgeTo[x])</span><br><span class="line">                &#123;</span><br><span class="line">                    cycle.push(x);</span><br><span class="line">                &#125;</span><br><span class="line">                cycle.push(w);</span><br><span class="line">                cycle.push(v);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        onStack[v] = <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -421,7 +476,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/11/a/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第六章错题集-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="GJYan">
@@ -440,7 +495,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/11/a/" itemprop="url">a</a></h1>
+                <a class="post-title-link" href="/2018/09/12/Security-考前第六章错题集-1/" itemprop="url">Security+ 考前第六章错题集-1</a></h1>
         
 
         <div class="post-meta">
@@ -452,8 +507,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-11T22:38:04+08:00">
-                2018-09-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:42:13+08:00">
+                2018-09-12
               </time>
             
 
@@ -462,6 +517,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index">
+                    <span itemprop="name">Security+</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -492,7 +569,59 @@
       
         
           
-            
+            <p>12;30;49;60</p>
+<ol>
+<li>公司需要确保各方面都安全，如果数据在公司内发送时已经做好了防护。以下哪个可以确保数据传输时的几种加密类型？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> SSH</li>
+<li style="list-style: none"><input type="checkbox"> SHA1</li>
+<li style="list-style: none"><input type="checkbox" checked> TPM</li>
+<li style="list-style: none"><input type="checkbox"> MD5</li>
+</ul>
+<hr>
+<ol start="2">
+<li>数字证书能用来确保下面哪项？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 可用性</li>
+<li style="list-style: none"><input type="checkbox" checked> 机密性</li>
+<li style="list-style: none"><input type="checkbox"> 验证</li>
+<li style="list-style: none"><input type="checkbox"> 授权</li>
+<li style="list-style: none"><input type="checkbox" checked> 不可抵赖性</li>
+</ul>
+<hr>
+<ol start="3">
+<li>管理员在评估使用SSL  VPN时保证网络速度前提下的传输安全强度，以下哪种加密密码最符合他们的需求？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> SHA256</li>
+<li style="list-style: none"><input type="checkbox"> RC4</li>
+<li style="list-style: none"><input type="checkbox"> 3DES</li>
+<li style="list-style: none"><input type="checkbox" checked> AES128</li>
+</ul>
+<hr>
+<ol start="4">
+<li>安全工程师Sara，正在测试加密密码的性能，以下哪种密码提供了较强的加密强度并且有最快的加密速度？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 3DES</li>
+<li style="list-style: none"><input type="checkbox" checked> Blowfish</li>
+<li style="list-style: none"><input type="checkbox"> Serpent</li>
+<li style="list-style: none"><input type="checkbox"> AES256</li>
+</ul>
+<hr>
+<ol start="5">
+<li>安全管理员发现公司的无线网络被懂行的员工用无线嗅探工具捕获并破解了员工的安全凭证。公司的无线网络最可能使用以下哪项技术？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> WPA with TKIP </li>
+<li style="list-style: none"><input type="checkbox"> VPN over open wireless</li>
+<li style="list-style: none"><input type="checkbox"> WEP128-PSK</li>
+<li style="list-style: none"><input type="checkbox"> WPA2-Enterprise</li>
+</ul>
+<hr>
+
           
         
       
@@ -545,7 +674,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/11/aa/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第六章错题集-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="GJYan">
@@ -564,7 +693,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/11/aa/" itemprop="url">aa</a></h1>
+                <a class="post-title-link" href="/2018/09/12/Security-考前第六章错题集-2/" itemprop="url">Security+ 考前第六章错题集-2</a></h1>
         
 
         <div class="post-meta">
@@ -576,8 +705,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-11T16:36:50+08:00">
-                2018-09-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:42:08+08:00">
+                2018-09-12
               </time>
             
 
@@ -586,6 +715,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index">
+                    <span itemprop="name">Security+</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -616,7 +767,17 @@
       
         
           
-            
+            <ol>
+<li>下列哪一项协议用于验证客户端与服务器的数字证书？  [分值：5]</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> PEAP(受保护的可扩展的身份验证协议)</li>
+<li style="list-style: none"><input type="checkbox"> DNS</li>
+<li style="list-style: none"><input type="checkbox" checked> TLS</li>
+<li style="list-style: none"><input type="checkbox"> ICMP</li>
+</ul>
+<hr>
+
           
         
       
@@ -669,7 +830,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/10/hello/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第五章错题集-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="GJYan">
@@ -688,7 +849,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/10/hello/" itemprop="url">hello</a></h1>
+                <a class="post-title-link" href="/2018/09/12/Security-考前第五章错题集-1/" itemprop="url">Security+ 考前第五章错题集-1</a></h1>
         
 
         <div class="post-meta">
@@ -700,8 +861,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-10T19:57:41+08:00">
-                2018-09-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:41:55+08:00">
+                2018-09-12
               </time>
             
 
@@ -710,6 +871,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index">
+                    <span itemprop="name">Security+</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -740,7 +923,1249 @@
       
         
           
-            <h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><p>这是我的第一篇文章</p>
+            <ol>
+<li>一个客户在网站登录过程中向网站提供了邮箱地址和密码，以下哪项最好的描述了邮件地址?</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> 识别</li>
+<li style="list-style: none"><input type="checkbox"> 授权</li>
+<li style="list-style: none"><input type="checkbox"> 访问控制</li>
+<li style="list-style: none"><input type="checkbox"> 认证</li>
+</ul>
+<hr>
+<ol start="2">
+<li>以下哪个认证服务器使用UDP作为传输层协议？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> TACACS+</li>
+<li style="list-style: none"><input type="checkbox"> LDAP</li>
+<li style="list-style: none"><input type="checkbox"> Kerberos</li>
+<li style="list-style: none"><input type="checkbox" checked> RADIUS</li>
+</ul>
+<hr>
+<ol start="3">
+<li>管理员希望连接互联网时隐藏内部网络的地址，最有效的隐藏网络地址的方法是？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 状态防火墙</li>
+<li style="list-style: none"><input type="checkbox"> 包过滤防火墙</li>
+<li style="list-style: none"><input type="checkbox"> NIPS</li>
+<li style="list-style: none"><input type="checkbox" checked> NAT</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第四章错题集-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GJYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyber security intern">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/12/Security-考前第四章错题集-2/" itemprop="url">Security+ 考前第四章错题集-2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:41:44+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index">
+                    <span itemprop="name">Security+</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>如果移动设备丢失，可以用以下哪种方法来降低风险？  [分值：5]</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 电缆锁</li>
+<li style="list-style: none"><input type="checkbox"> 传输加密</li>
+<li style="list-style: none"><input type="checkbox"> 语音加密</li>
+<li style="list-style: none"><input type="checkbox"> 强口令</li>
+</ul>
+<hr>
+<ol start="2">
+<li>IT审计员作为合法认证用户测试应用程序。这是哪种测试方法？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 参透测试</li>
+<li style="list-style: none"><input type="checkbox"> 白盒测试</li>
+<li style="list-style: none"><input type="checkbox"> 黑盒测试</li>
+<li style="list-style: none"><input type="checkbox" checked> 灰盒测试</li>
+</ul>
+<hr>
+<ol start="3">
+<li>以下哪项安全概念识别输入变量，然后对该输入进行边界测试？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 应用基线</li>
+<li style="list-style: none"><input type="checkbox"> 应用加固</li>
+<li style="list-style: none"><input type="checkbox"> 安全编码</li>
+<li style="list-style: none"><input type="checkbox" checked> 模糊测试</li>
+</ul>
+<hr>
+<ol start="4">
+<li>下面哪个评估技术会被安全管理员用来确保系统和软件被正确地开发？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 基线汇报</li>
+<li style="list-style: none"><input type="checkbox"> 输入验证</li>
+<li style="list-style: none"><input type="checkbox"> 攻击面分析</li>
+<li style="list-style: none"><input type="checkbox" checked> 设计复审</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第四章错题集-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GJYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyber security intern">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/12/Security-考前第四章错题集-1/" itemprop="url">Security+ 考前第四章错题集-1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:41:41+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index">
+                    <span itemprop="name">Security+</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>139<br>142<br>145<br>150</p>
+<ol>
+<li>如果移动设备丢失，可以用以下哪种方法来降低风险？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> Cable lock 电缆锁</li>
+<li style="list-style: none"><input type="checkbox"> Transport encryption(传输加)</li>
+<li style="list-style: none"><input type="checkbox"> 语音加密</li>
+<li style="list-style: none"><input type="checkbox" checked> 强口令</li>
+</ul>
+<hr>
+<p>…….</p>
+<hr>
+<ol start="2">
+<li>下面哪项是一种在移动设备丢失的情况下缓解数据损失的技术控制手段？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> Disk encryption 磁盘加密</li>
+<li style="list-style: none"><input type="checkbox"> Encryption policy 加密政策</li>
+<li style="list-style: none"><input type="checkbox"> Solid state drive 固态驱动</li>
+<li style="list-style: none"><input type="checkbox"> Mobile device policy 移动设备政策</li>
+</ul>
+<hr>
+<hr>
+<ol start="3">
+<li>下面能用最少的代价提供最佳的数据容错率？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 负载均衡</li>
+<li style="list-style: none"><input type="checkbox"> 集群</li>
+<li style="list-style: none"><input type="checkbox"> 服务器虚拟化</li>
+<li style="list-style: none"><input type="checkbox" checked> RAID 6</li>
+</ul>
+<hr>
+<hr>
+<ol start="4">
+<li>为什么技术人员使用密码破解器？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> 为了探查网络中的弱密码</li>
+<li style="list-style: none"><input type="checkbox"> 为了在员工离职时该他的密码</li>
+<li style="list-style: none"><input type="checkbox"> 为了强制达到密码复杂度要求</li>
+<li style="list-style: none"><input type="checkbox"> 为了在员工忘记密码时帮他们改用户密码</li>
+</ul>
+<hr>
+<hr>
+<ol start="5">
+<li>安全管理员Matt会使用以下哪个数据加密类型来加密某个指定的表？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 全盘加密</li>
+<li style="list-style: none"><input type="checkbox"> 单个文件加密</li>
+<li style="list-style: none"><input type="checkbox" checked> 数据库加密</li>
+<li style="list-style: none"><input type="checkbox"> 移动介质加密</li>
+</ul>
+<hr>
+<hr>
+<ol start="6">
+<li>下列哪一项技术使用了多个设备共同工作？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 交换机</li>
+<li style="list-style: none"><input type="checkbox" checked> 负载均衡</li>
+<li style="list-style: none"><input type="checkbox"> RAID</li>
+<li style="list-style: none"><input type="checkbox"> VPN集中器</li>
+</ul>
+<hr>
+<hr>
+<ol start="7">
+<li>管理员想要审查现有企业的安全措施有效性，他最好从哪方面开始？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 审查过去安全事件和解决</li>
+<li style="list-style: none"><input type="checkbox"> 重写现有安全策略</li>
+<li style="list-style: none"><input type="checkbox" checked> 部署一个入侵检测系统</li>
+<li style="list-style: none"><input type="checkbox"> 安装一个蜜罐系统</li>
+</ul>
+<hr>
+<hr>
+<ol start="8">
+<li>公司使用整合了很多功能的移动应用来替代大量的设备。以下哪些项适合的描述了这项措施</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 云计算</li>
+<li style="list-style: none"><input type="checkbox"> 虚拟化</li>
+<li style="list-style: none"><input type="checkbox" checked> 一体化设备</li>
+<li style="list-style: none"><input type="checkbox"> 负载均衡</li>
+<li style="list-style: none"><input type="checkbox" checked> 单点故障</li>
+</ul>
+<hr>
+<hr>
+<ol start="9">
+<li>如果移除一体化设备，IT管理中的那个风险可能被削弱</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 操作连续性</li>
+<li style="list-style: none"><input type="checkbox"> 输入验证</li>
+<li style="list-style: none"><input type="checkbox" checked> 单点故障</li>
+<li style="list-style: none"><input type="checkbox"> 单点登录</li>
+</ul>
+<hr>
+<p>单点故障（single point of failure），从英文字面上可以看到是单个点发生的故障，通常应用于计算机系统及网络。实际指的是单个点发生故障的时候会波及到整个系统或者网络，从而导致整个系统或者网络的瘫痪。</p>
+<hr>
+<ol start="10">
+<li>IT管理员Matt，希望保护一个新搭建的服务器免遭零日攻击，以下哪个是提供最强级别的保护？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> HIPS</li>
+<li style="list-style: none"><input type="checkbox"> Antivirus</li>
+<li style="list-style: none"><input type="checkbox"> NIDS</li>
+<li style="list-style: none"><input type="checkbox"> ACL</li>
+</ul>
+<hr>
+<hr>
+<ol start="11">
+<li>以下都是加密类型，除了：</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> FUll disk</li>
+<li style="list-style: none"><input type="checkbox"> SMIME</li>
+<li style="list-style: none"><input type="checkbox"> File and folder</li>
+<li style="list-style: none"><input type="checkbox" checked> RADIUS</li>
+</ul>
+<hr>
+<hr>
+<ol start="12">
+<li>当一个源码从一个开源项目合并到一个高安全环境时，以下哪个预防措施应该被用来防范隐藏的威胁</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 设计审查</li>
+<li style="list-style: none"><input type="checkbox" checked> 代码审查</li>
+<li style="list-style: none"><input type="checkbox"> 风险评估</li>
+<li style="list-style: none"><input type="checkbox"> 漏洞扫描</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第三章错题集-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GJYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyber security intern">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/12/Security-考前第三章错题集-2/" itemprop="url">Security+ 考前第三章错题集-2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:41:29+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index">
+                    <span itemprop="name">Security+</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>在浏览一个网站后，用户收到一封信感谢感谢购买他并没有下订单的东西。调查后安全管理员发现在弹出窗口汇总有如下源代码：  [分值：5]<html><br><body onload="document.getElementByID('badForm').submit()"> &lt;form<br>id=”badForm” action=”shoppingsite.company.com/purchase.php”<br>method=”post” <input name="Perform Purchase" value="Perform Purchase"> </body></html>
+</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> A. SQL injection SQL注入</li>
+<li style="list-style: none"><input type="checkbox"> B. Cookie stealing Cookie窃取</li>
+<li style="list-style: none"><input type="checkbox" checked> C. XSRF 跨站欺骗请求</li>
+<li style="list-style: none"><input type="checkbox"> D. XSS 跨站脚本攻击</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第三章错题集-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GJYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyber security intern">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/12/Security-考前第三章错题集-1/" itemprop="url">Security+ 考前第三章错题集-1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:41:24+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index">
+                    <span itemprop="name">Security+</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>75</p>
+<ol>
+<li>应用开发工程师Sara在输入验证处进行错误和异常处理，这可以预防那种攻击？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> Buffer overflow(缓冲区溢出)</li>
+<li style="list-style: none"><input type="checkbox"> Pop-up blockers(弹出窗口屏蔽)</li>
+<li style="list-style: none"><input type="checkbox"> Cross-site scrpting(跨站脚本)</li>
+<li style="list-style: none"><input type="checkbox"> Fuzzing(模糊测试)</li>
+</ul>
+<hr>
+<hr>
+<ol start="2">
+<li>安全管理员Pete通过IDS发现公司网站正在被攻击，分析Web Log显示以下信息，暗示一个用户试图在电子公告板上发布评论。Insert into message ‘<script>source=<a href="http://evilsite">http://evilsite</a></script>‘这是以下哪项的例子。<ul>
+<li style="list-style: none"><input type="checkbox" checked> XSS攻击</li>
+<li style="list-style: none"><input type="checkbox"> XML注入攻击</li>
+<li style="list-style: none"><input type="checkbox"> 内存溢出攻击</li>
+<li style="list-style: none"><input type="checkbox"> SQL注入攻击</li>
+</ul>
+</li>
+</ol>
+<hr>
+<hr>
+<ol start="3">
+<li><strong>受害者为了排除一些路由器问题，登陆了一个流行的路由器论坛网站。路由器配置很标准并且IP地址为192.168.1.1.受害者的浏览器一个选项卡登陆路由器管理界面，另一个选项卡单击一个论坛链接。由于点击论坛的链接。路由器被重启，这可能是哪种攻击？</strong></li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> Brute force password attack暴力破解密码攻击</li>
+<li style="list-style: none"><input type="checkbox" checked> Cross-site request forgery 跨站伪造请求</li>
+<li style="list-style: none"><input type="checkbox"> Cross-site scripting 跨站脚本</li>
+<li style="list-style: none"><input type="checkbox"> Fuzzing 模糊测试</li>
+</ul>
+<hr>
+<ul>
+<li>Xss是攻击者在web页面插入恶意的代码。当用户浏览该页面的时候，代码执行，从而实现攻击目的。对受害用户可能采取Cookie资料窃取、会话劫持、钓鱼欺骗等各种攻击。</li>
+<li>CSRF（Cross-site request forgery），中文名称：跨站请求伪造，危害是攻击者可以盗用你的身份，以你的名义发送恶意请求。比如可以盗取你的账号，以你的身份发送邮件，购买商品等。</li>
+</ul>
+<hr>
+<ol start="4">
+<li>下列哪一个最能代表漏洞评估的目标？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 为了测试系统的反应从而得知威胁</li>
+<li style="list-style: none"><input type="checkbox"> 为了减少的暴露的可能性</li>
+<li style="list-style: none"><input type="checkbox" checked> 为了确定系统的安全态势</li>
+<li style="list-style: none"><input type="checkbox"> 为了分析风险环节策略</li>
+<li></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第二章错题集-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GJYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyber security intern">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/12/Security-考前第二章错题集-2/" itemprop="url">Security+ 考前第二章错题集-2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:40:48+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index">
+                    <span itemprop="name">Security+</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>10;30;78;90;127;131</p>
+<ol>
+<li>IT管理员Pete需要加强机房安全建设，以下哪项可以提供最好的物理防护？  [分值：1]</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 出入记录</li>
+<li style="list-style: none"><input type="checkbox" checked> 陷阱房间</li>
+<li style="list-style: none"><input type="checkbox"> 视频监控</li>
+<li style="list-style: none"><input type="checkbox"> 空调系统</li>
+</ul>
+<hr>
+<ol start="2">
+<li>网络管理员负责提升DMZ区里web服务器的应用程序编码，以下哪项过程用于确保应用程序的完整性？  [分值：1]</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 应用程序加固</li>
+<li style="list-style: none"><input type="checkbox"> 应用程序审查</li>
+<li style="list-style: none"><input type="checkbox" checked> 应用程序变更管理</li>
+<li style="list-style: none"><input type="checkbox"> 应用程序补丁管理</li>
+</ul>
+<hr>
+<ol start="3">
+<li>以下哪项最好的提供了最好的应用系统可用性，并且容易根据需求发展进行扩展</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 服务器虚拟化</li>
+<li style="list-style: none"><input type="checkbox" checked> 负载均衡</li>
+<li style="list-style: none"><input type="checkbox"> 主被动集群</li>
+<li style="list-style: none"><input type="checkbox"> RAID 6</li>
+</ul>
+<hr>
+<ol start="4">
+<li>下面哪项最佳定义了当打补丁失败导致系统故障时的特殊流程？  [分值：1]</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 风险转移</li>
+<li style="list-style: none"><input type="checkbox" checked> 变更管理</li>
+<li style="list-style: none"><input type="checkbox"> 配置管理</li>
+<li style="list-style: none"><input type="checkbox"> 访问控制重验证</li>
+</ul>
+<hr>
+<ol start="5">
+<li>审计员进入会议室进行检查，他们把笔记本接入墙上的信息点，网络不通，但网口灯是亮的，以下哪一个最有可能导致这一问题？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 网线损坏</li>
+<li style="list-style: none"><input type="checkbox"> 主机防火墙不允许外联</li>
+<li style="list-style: none"><input type="checkbox" checked> 网络访问控制</li>
+<li style="list-style: none"><input type="checkbox"> 交换机端口关闭</li>
+</ul>
+<hr>
+<ol start="6">
+<li>安全工程师每月会收到新的应用程序扩展，在部署之前需要保证他们的安全。他们不希望新的扩展对已有程序的安全产生影响。而且，工程师希望确保新需求被合适的人授权。以下那些项可以达到这两个目的(选两个)？  [分值：1]</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 补丁审计策略</li>
+<li style="list-style: none"><input type="checkbox" checked> 变更控制策略</li>
+<li style="list-style: none"><input type="checkbox"> 事件管理策略</li>
+<li style="list-style: none"><input type="checkbox" checked> 回归测试策略</li>
+<li style="list-style: none"><input type="checkbox"> 升级策略</li>
+<li style="list-style: none"><input type="checkbox"> 应用审计策略</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第二章错题集-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GJYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyber security intern">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/12/Security-考前第二章错题集-1/" itemprop="url">Security+ 考前第二章错题集-1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:37:58+08:00">
+                2018-09-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Security/" itemprop="url" rel="index">
+                    <span itemprop="name">Security+</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>16<br>131<br>138<br>142</p>
+<ol>
+<li>以下哪个包含应用补丁管理？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> 配置管理</li>
+<li style="list-style: none"><input type="checkbox"> 策略管理</li>
+<li style="list-style: none"><input type="checkbox"> 跨站请求伪造</li>
+<li style="list-style: none"><input type="checkbox"> 模糊测试</li>
+</ul>
+<hr>
+<hr>
+<ol start="2">
+<li>以下哪个概念定义了数据可用性的需求？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 使用RADIUS进行认证</li>
+<li style="list-style: none"><input type="checkbox"> 不可否认的邮件信息</li>
+<li style="list-style: none"><input type="checkbox" checked> 灾难恢复计划</li>
+<li style="list-style: none"><input type="checkbox"> 加密邮件信息</li>
+</ul>
+<hr>
+<hr>
+<ol start="3">
+<li>报告间谍软件干扰的要求包含在以下哪个步骤？</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 常规审计</li>
+<li style="list-style: none"><input type="checkbox"> 变更管理</li>
+<li style="list-style: none"><input type="checkbox" checked> 事件管理</li>
+<li style="list-style: none"><input type="checkbox"> 桌面清理策略</li>
+</ul>
+<hr>
+<hr>
+<ol start="4">
+<li>安全工程师每月会收到新的应用程序扩展，在部署之前需要保证他们的安全，他们不希望新的扩展对已有程序的安全产生影响。而且，工程师希望确保新需求被合适的人授权。以下哪些项可以达到这两个目的。</li>
+</ol>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 补丁审计策略</li>
+<li style="list-style: none"><input type="checkbox" checked> 变更控制策略</li>
+<li style="list-style: none"><input type="checkbox"> 事件管理策略</li>
+<li style="list-style: none"><input type="checkbox" checked> 回归测试策略</li>
+<li style="list-style: none"><input type="checkbox"> 升级策略</li>
+<li style="list-style: none"><input type="checkbox"> 应用审计策略</li>
+</ul>
 
           
         
@@ -784,6 +2209,10 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -826,8 +2255,8 @@
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">4</span>
+              <a href="/archives/">
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -838,7 +2267,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -1064,6 +2493,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
