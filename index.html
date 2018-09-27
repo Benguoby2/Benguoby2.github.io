@@ -308,6 +308,201 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/27/PostgreSQL的一的一些简单操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GJYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://note.youdao.com/yws/api/personal/file/BDFD17C56F234A3A9AA2D87B91DC89B0?method=download&shareKey=668ab47cd1125e256c2b526be5a8b741">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyber security intern">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/27/PostgreSQL的一的一些简单操作/" itemprop="url">PostgreSQL的一的一些简单操作</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-27T16:32:25+08:00">
+                2018-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PostgreSQL/" itemprop="url" rel="index">
+                    <span itemprop="name">PostgreSQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="https-www-yiibai-com-笔者是从这里学习的"><a href="#https-www-yiibai-com-笔者是从这里学习的" class="headerlink" title="https://www.yiibai.com/ 笔者是从这里学习的"></a><a href="https://www.yiibai.com/" target="_blank" rel="noopener">https://www.yiibai.com/</a> 笔者是从这里学习的</h5><blockquote>
+<p>psql -h 127.0.0.1 -U postgres<br>登陆SQL  </p>
+</blockquote>
+<blockquote>
+<p>create database 库名;<br>创建数据库库  </p>
+</blockquote>
+<blockquote>
+<p>drop database 库名;<br>删除库  </p>
+</blockquote>
+<blockquote>
+<p>\l<br>查看数据库  </p>
+</blockquote>
+<blockquote>
+<p>CREATE TABLE table_name  (<br>    colum1 datatype,<br>    colum2 datatype,<br>    …<br>    PRIMARY KEY (one or more columns)<br>    )<br><img src="https://note.youdao.com/yws/api/personal/file/613B7C500CF641A386D74203353F9F24?method=download&amp;shareKey=366782cacaf01cd9cb127f9710f79b03" alt="avatar"><br><img src="https://note.youdao.com/yws/api/personal/file/8724AA199D9E4AC0AA6E25BE8926BC03?method=download&amp;shareKey=00c07bc333108202480f3f35fc97ddd8" alt="avatar"><br><img src="https://note.youdao.com/yws/api/personal/file/764316747BD748A48BD0CCAFB9DC5B37?method=download&amp;shareKey=f15cf5134b0c4d462e8f42f405983459" alt="avatar"><br><img src="https://note.youdao.com/yws/api/personal/file/BD3B14B4E7154E18B341B2F9F02304C8?method=download&amp;shareKey=a514550a18ed95a8b9de896735e323c1" alt="avatar"><br>alter table 表名A rename to 表名 B;<br>重命名一个表  </p>
+</blockquote>
+<blockquote>
+<p>drop table 表名;<br>删除一个表  </p>
+</blockquote>
+<blockquote>
+<p>create schema 模式名;<br>创建一个数据库模式  </p>
+</blockquote>
+<blockquote>
+<p>drop schema 模式名;<br>删除一个数据库模式<br>如果该模式内还有其他的表，即不为空</p>
+</blockquote>
+<blockquote>
+<p>drop schema 模式名 cascade;<br>采用递归删除，将模式内的内容全部删除  </p>
+</blockquote>
+<blockquote>
+<p>INSERT INTO 表名 （column1, column2, column3…)<br>VALUES (value1, value2, value3…)；<br>向表中插入数据，也可多行插入<br>INSERT INTO 表名 （column1, column2, column3…)<br>VALUES (value1, value2, value3…)，<br>(value1, value2, value3…)，<br>(value1, value2, value3…)，<br>(value1, value2, value3…);  </p>
+</blockquote>
+<blockquote>
+<p>SELECT “column1”, “column2”, “column3”, “column4” FROM “table_name”<br>从表中索引数据<br>SELECT * FROM “table_name”<br>查询全部列  </p>
+</blockquote>
+<blockquote>
+<p>update table_name<br>Set column1=value1, column2=value2, column3=value3…<br>where [condition]<br>更新表中数据  </p>
+</blockquote>
+<blockquote>
+<p>delete from table_name<br>where [condition]<br>删除表中符合condition的行  </p>
+</blockquote>
+<blockquote>
+<p>selcet column_list<br>from table_name<br>[where condition]<br>ORDER BY column1, column2, column3…columnN[ASC | DESC]<br>查询表中按列的升序或降序展示  </p>
+</blockquote>
+<blockquote>
+<p>select column1 column2<br>from table1, table2<br>WHERE [ conditions ]<br>GROUP BY column1, column2<br>HAVING [ conditions ]<br>ORDER BY column1, column2<br>having 就是对数据进行进一步筛选  </p>
+</blockquote>
+<blockquote>
+<p>SELECT column1, column2, ….. columnN<br>FROM table_name<br>WHERE [search_condition]<br>AND [search_condition];<br>AND条件与WHERE子句一起使用，以从表中的多个列中选择唯一的数据<br>OR [search_condition];<br>OR条件与WHERE子句一起使用，以从表中的一列或多列列中选择唯一数据。<br>WHERE [search_condition] NOT [condition];<br>NOT条件与WHERE子句一起使用以否定查询中的条件。<br>LIKE [condition];<br>LIKE条件与WHERE子句一起用于从指定条件满足LIKE条件的表中获取数据。<br>WHERE [search_condition] BETWEEN [condition];<br>BETWEEN条件与WHERE子句一起使用，以从两个指定条件之间的表中获取数据。<br>WHERE AGE BETWEEN 24 AND 27;  </p>
+</blockquote>
+<p>以上都是简单的sql操作，后续如果有时间在整理以下PostgreSQL的高级部分比如视图，函数，触发器等。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Sublime-text-3-搭配markdown以及实时预览/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1924,214 +2119,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第二章错题集-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="GJYan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://note.youdao.com/yws/api/personal/file/BDFD17C56F234A3A9AA2D87B91DC89B0?method=download&shareKey=668ab47cd1125e256c2b526be5a8b741">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cyber security intern">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/12/Security-考前第二章错题集-2/" itemprop="url">Security+ 考前第二章错题集-2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:40:48+08:00">
-                2018-09-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Security/" itemprop="url" rel="index">
-                    <span itemprop="name">Security+</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>10;30;78;90;127;131</p>
-<ol>
-<li>IT管理员Pete需要加强机房安全建设，以下哪项可以提供最好的物理防护？  [分值：1]</li>
-</ol>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 出入记录</li>
-<li style="list-style: none"><input type="checkbox" checked> 陷阱房间</li>
-<li style="list-style: none"><input type="checkbox"> 视频监控</li>
-<li style="list-style: none"><input type="checkbox"> 空调系统</li>
-</ul>
-<hr>
-<ol start="2">
-<li>网络管理员负责提升DMZ区里web服务器的应用程序编码，以下哪项过程用于确保应用程序的完整性？  [分值：1]</li>
-</ol>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 应用程序加固</li>
-<li style="list-style: none"><input type="checkbox"> 应用程序审查</li>
-<li style="list-style: none"><input type="checkbox" checked> 应用程序变更管理</li>
-<li style="list-style: none"><input type="checkbox"> 应用程序补丁管理</li>
-</ul>
-<hr>
-<ol start="3">
-<li>以下哪项最好的提供了最好的应用系统可用性，并且容易根据需求发展进行扩展</li>
-</ol>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 服务器虚拟化</li>
-<li style="list-style: none"><input type="checkbox" checked> 负载均衡</li>
-<li style="list-style: none"><input type="checkbox"> 主被动集群</li>
-<li style="list-style: none"><input type="checkbox"> RAID 6</li>
-</ul>
-<hr>
-<ol start="4">
-<li>下面哪项最佳定义了当打补丁失败导致系统故障时的特殊流程？  [分值：1]</li>
-</ol>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 风险转移</li>
-<li style="list-style: none"><input type="checkbox" checked> 变更管理</li>
-<li style="list-style: none"><input type="checkbox"> 配置管理</li>
-<li style="list-style: none"><input type="checkbox"> 访问控制重验证</li>
-</ul>
-<hr>
-<ol start="5">
-<li>审计员进入会议室进行检查，他们把笔记本接入墙上的信息点，网络不通，但网口灯是亮的，以下哪一个最有可能导致这一问题？</li>
-</ol>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 网线损坏</li>
-<li style="list-style: none"><input type="checkbox"> 主机防火墙不允许外联</li>
-<li style="list-style: none"><input type="checkbox" checked> 网络访问控制</li>
-<li style="list-style: none"><input type="checkbox"> 交换机端口关闭</li>
-</ul>
-<hr>
-<ol start="6">
-<li>安全工程师每月会收到新的应用程序扩展，在部署之前需要保证他们的安全。他们不希望新的扩展对已有程序的安全产生影响。而且，工程师希望确保新需求被合适的人授权。以下那些项可以达到这两个目的(选两个)？  [分值：1]</li>
-</ol>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 补丁审计策略</li>
-<li style="list-style: none"><input type="checkbox" checked> 变更控制策略</li>
-<li style="list-style: none"><input type="checkbox"> 事件管理策略</li>
-<li style="list-style: none"><input type="checkbox" checked> 回归测试策略</li>
-<li style="list-style: none"><input type="checkbox"> 升级策略</li>
-<li style="list-style: none"><input type="checkbox"> 应用审计策略</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2182,7 +2169,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -2193,7 +2180,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -2204,7 +2191,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
