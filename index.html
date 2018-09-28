@@ -308,6 +308,301 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/27/LeetCode刷题经历0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GJYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://note.youdao.com/yws/api/personal/file/BDFD17C56F234A3A9AA2D87B91DC89B0?method=download&shareKey=668ab47cd1125e256c2b526be5a8b741">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyber security intern">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/27/LeetCode刷题经历0/" itemprop="url">LeetCode刷题经历0</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-27T20:42:32+08:00">
+                2018-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">Leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>最近开始尽量每天做一道Leetcode上的编程题，因为自己的能力有限哈哈哈哈，做题顺序是按照题目的Acceptance由高到低的做题顺序开始的。</p>
+<p>  做题的时候同时打开中英文Leetcode网站，中文网站进行题目解读，英文网站是为了看一下网友们的解题思路。</p>
+</blockquote>
+<p>好啦，我们开始了~这是我这几天自己做的题目，<code>771</code>, <code>801</code>, <code>709</code>, <code>905</code>, <code>595</code>, <code>804</code>, 都是用go来写的，有些题目提交语言中没有go语言所以选择忽略。 </p>
+<hr>
+<hr>
+<h3 id="771"><a href="#771" class="headerlink" title="771"></a>771</h3><blockquote>
+<p>给定字符串<code>J</code> 代表石头中宝石的类型，和字符串<code>S</code>代表你拥有的石头。 <code>S</code> 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。<br><code>J</code> 中的字母不重复;<code>J</code> 和 <code>S</code>中的所有字符都是字母。字母区分大小写，因此”a”和”A”是不同类型的石头。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>示例 1：<br>输入： J = “aA”, S = “aAAbbbb”<br>输出: 3  </p>
+</blockquote>
+<hr>
+<blockquote>
+<p>示例 2：<br>输入: J = “z”, S = “ZZ”<br>输出: 0  </p>
+</blockquote>
+<p><strong> 题目通过率81.7% </strong>   </p>
+<pre><code class="go"><span class="function"><span class="keyword">func</span> <span class="title">numJewelsInStones</span><span class="params">(J <span class="keyword">string</span>, S <span class="keyword">string</span>)</span> <span class="title">int</span></span> {
+    jewels := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">rune</span>] <span class="keyword">bool</span>)
+
+    <span class="keyword">for</span> _, j := <span class="keyword">range</span> J{
+        jewels[j] = <span class="literal">true</span>
+    }
+    count := <span class="number">0</span>
+    <span class="keyword">for</span> _, s := <span class="keyword">range</span> S {
+        <span class="keyword">if</span> jewels[s]{
+            count ++
+        }
+    }
+    <span class="keyword">return</span> count    
+}  
+</code></pre>
+<h3 id="807"><a href="#807" class="headerlink" title="807"></a>807</h3><blockquote>
+<p>在二维数组grid中，grid[i][j]代表位于某处的建筑物的高度。 我们被允许增加任何数量（不同建筑物的数量可能不同）的建筑物的高度。 高度 0 也被认为是建筑物。<br>最后，从新数组的所有四个方向（即顶部，底部，左侧和右侧）观看的“天际线”必须与原始数组的天际线相同。 城市的天际线是从远处观看时，由所有建筑物形成的矩形的外部轮廓。 请看下面的例子。</p>
+</blockquote>
+<p>建筑物高度可以增加的最大总和是多少？ </p>
+<hr>
+<blockquote>
+<p>示例 1：<br>输入： grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]<br>输出: 35  </p>
+</blockquote>
+<hr>
+<p> The grid is:<br>[   [3, 0, 8, 4],<br>  [2, 4, 5, 7],<br>  [9, 2, 6, 3],<br>  [0, 3, 1, 0] ]</p>
+<p>从数组竖直方向（即顶部，底部）看“天际线”是：[9, 4, 8, 7]<br>从水平水平方向（即左侧，右侧）看“天际线”是：[8, 7, 9, 3]  </p>
+<p>在不影响天际线的情况下对建筑物进行增高后，新数组如下：  </p>
+<p>gridNew = [ [8, 4, 8, 7],<br>            [7, 4, 7, 7],<br>            [9, 4, 8, 7],<br>            [3, 3, 3, 3] ]<br><strong> 题目通过率80.0% </strong>   </p>
+<pre><code class="go"><span class="function"><span class="keyword">func</span> <span class="title">maxIncreaseKeepingSkyline</span><span class="params">(grid [][]<span class="keyword">int</span>)</span> <span class="title">int</span></span> {
+    <span class="comment">//l := len(grid)</span>
+
+    X0 := X0Func(grid)
+
+    Y0 := Y0Func(grid)
+    count := <span class="number">0</span>
+
+    <span class="keyword">for</span> i, grid_x := <span class="keyword">range</span> grid{
+        <span class="keyword">for</span> j, grid_v := <span class="keyword">range</span> grid_x{
+            count += min(X0[i], Y0[j]) - grid_v
+        }
+    }
+    <span class="keyword">return</span> count
+}
+
+<span class="function"><span class="keyword">func</span> <span class="title">min</span> <span class="params">(x, y <span class="keyword">int</span>)</span> <span class="title">int</span></span> {
+    <span class="keyword">if</span> x &lt; y {
+        <span class="keyword">return</span> x
+    }
+    <span class="keyword">return</span> y
+}
+
+<span class="function"><span class="keyword">func</span> <span class="title">X0Func</span><span class="params">(grid [][]<span class="keyword">int</span>)</span> []<span class="title">int</span></span> {
+    l := <span class="built_in">len</span>(grid)
+    <span class="keyword">var</span> X0 = []<span class="keyword">int</span>{}
+    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; l; i++ {
+        max := grid[i][<span class="number">0</span>]
+        <span class="keyword">for</span> j := <span class="number">1</span>; j &lt; l; j++ {
+            <span class="keyword">if</span> max &lt; grid[i][j] {
+                max = grid[i][j]
+            }
+        }
+        X0 = <span class="built_in">append</span>(X0, max)
+    }
+    <span class="keyword">return</span> X0
+}
+
+<span class="function"><span class="keyword">func</span> <span class="title">Y0Func</span><span class="params">(grid [][]<span class="keyword">int</span>)</span> []<span class="title">int</span></span> {
+    l := <span class="built_in">len</span>(grid)
+    <span class="keyword">var</span> Y0 = []<span class="keyword">int</span>{}
+    <span class="keyword">for</span> j := <span class="number">0</span>; j &lt; l; j++ {
+        max := grid[<span class="number">0</span>][j]
+        <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; l; i++ {
+            <span class="keyword">if</span> max &lt; grid[i][j]{
+                max = grid[i][j]
+            }
+        }
+        Y0 = <span class="built_in">append</span>(Y0, max)
+
+    }
+    <span class="keyword">return</span> Y0
+}    
+</code></pre>
+<h3 id="709"><a href="#709" class="headerlink" title="709"></a>709</h3><blockquote>
+<p>实现函数 ToLowerCase()，该函数接收一个字符串参数 str，并将该字符串中的大写字母转换成小写字母，之后返回新的字符串。  </p>
+</blockquote>
+<hr>
+<blockquote>
+<p>示例 1：<br>输入： “Hello”<br>输出: “hello”    </p>
+</blockquote>
+<hr>
+<blockquote>
+<p>示例 2：<br>输入: “here”<br>输出: “here”    </p>
+</blockquote>
+<p><strong> 题目通过率74.4% </strong>   </p>
+<pre><code class="go"><span class="function"><span class="keyword">func</span> <span class="title">toLowerCase</span><span class="params">(str <span class="keyword">string</span>)</span> <span class="title">string</span></span> {
+    strs := <span class="string">""</span>
+    <span class="keyword">for</span> _, s := <span class="keyword">range</span> str{
+
+        strs += strings.ToLower(<span class="keyword">string</span>(s))
+    }
+    <span class="keyword">return</span> strs
+
+}    
+</code></pre>
+<h3 id="905"><a href="#905" class="headerlink" title="905"></a>905</h3><blockquote>
+<p>给定一个非负整数数组 A，返回一个由 A 的所有偶数元素组成的数组，后面跟 A 的所有奇数元素。<br>你可以返回满足此条件的任何数组作为答案。  </p>
+</blockquote>
+<hr>
+<blockquote>
+<p>示例 1：<br>输入 : [3,1,2,4]<br>输出 : [2,4,3,1]<br><em>输出 [4,2,3,1]，[2,4,1,3] 和 [4,2,1,3] 也会被接受。</em></p>
+</blockquote>
+<hr>
+<p><strong> 题目通过率72.2% </strong>   </p>
+<pre><code class="go"><span class="function"><span class="keyword">func</span> <span class="title">sortArrayByParity</span><span class="params">(A []<span class="keyword">int</span>)</span> []<span class="title">int</span></span> {
+    L := <span class="built_in">len</span>(A)
+    <span class="keyword">var</span> A1 = <span class="built_in">make</span>([]<span class="keyword">int</span>, L)
+    i := <span class="number">0</span>
+    f := L<span class="number">-1</span>
+    <span class="keyword">for</span> _, a := <span class="keyword">range</span> A {
+        <span class="keyword">if</span> a % <span class="number">2</span> == <span class="number">0</span> {
+            A1[i] = a
+            i++
+        }<span class="keyword">else</span> {
+            A1[f] = a
+            f--
+        }
+    }
+    <span class="keyword">return</span> A1
+}    
+</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/27/PostgreSQL的一的一些简单操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1925,200 +2220,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第三章错题集-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="GJYan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://note.youdao.com/yws/api/personal/file/BDFD17C56F234A3A9AA2D87B91DC89B0?method=download&shareKey=668ab47cd1125e256c2b526be5a8b741">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cyber security intern">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/12/Security-考前第三章错题集-1/" itemprop="url">Security+ 考前第三章错题集-1</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:41:24+08:00">
-                2018-09-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Security/" itemprop="url" rel="index">
-                    <span itemprop="name">Security+</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>75</p>
-<ol>
-<li>应用开发工程师Sara在输入验证处进行错误和异常处理，这可以预防那种攻击？</li>
-</ol>
-<ul>
-<li style="list-style: none"><input type="checkbox" checked> Buffer overflow(缓冲区溢出)</li>
-<li style="list-style: none"><input type="checkbox"> Pop-up blockers(弹出窗口屏蔽)</li>
-<li style="list-style: none"><input type="checkbox"> Cross-site scrpting(跨站脚本)</li>
-<li style="list-style: none"><input type="checkbox"> Fuzzing(模糊测试)</li>
-</ul>
-<hr>
-<hr>
-<ol start="2">
-<li>安全管理员Pete通过IDS发现公司网站正在被攻击，分析Web Log显示以下信息，暗示一个用户试图在电子公告板上发布评论。Insert into message ‘<script>source=<a href="http://evilsite">http://evilsite</a></script>‘这是以下哪项的例子。<ul>
-<li style="list-style: none"><input type="checkbox" checked> XSS攻击</li>
-<li style="list-style: none"><input type="checkbox"> XML注入攻击</li>
-<li style="list-style: none"><input type="checkbox"> 内存溢出攻击</li>
-<li style="list-style: none"><input type="checkbox"> SQL注入攻击</li>
-</ul>
-</li>
-</ol>
-<hr>
-<hr>
-<ol start="3">
-<li><strong>受害者为了排除一些路由器问题，登陆了一个流行的路由器论坛网站。路由器配置很标准并且IP地址为192.168.1.1.受害者的浏览器一个选项卡登陆路由器管理界面，另一个选项卡单击一个论坛链接。由于点击论坛的链接。路由器被重启，这可能是哪种攻击？</strong></li>
-</ol>
-<ul>
-<li style="list-style: none"><input type="checkbox"> Brute force password attack暴力破解密码攻击</li>
-<li style="list-style: none"><input type="checkbox" checked> Cross-site request forgery 跨站伪造请求</li>
-<li style="list-style: none"><input type="checkbox"> Cross-site scripting 跨站脚本</li>
-<li style="list-style: none"><input type="checkbox"> Fuzzing 模糊测试</li>
-</ul>
-<hr>
-<ul>
-<li>Xss是攻击者在web页面插入恶意的代码。当用户浏览该页面的时候，代码执行，从而实现攻击目的。对受害用户可能采取Cookie资料窃取、会话劫持、钓鱼欺骗等各种攻击。</li>
-<li>CSRF（Cross-site request forgery），中文名称：跨站请求伪造，危害是攻击者可以盗用你的身份，以你的名义发送恶意请求。比如可以盗取你的账号，以你的身份发送邮件，购买商品等。</li>
-</ul>
-<hr>
-<ol start="4">
-<li>下列哪一个最能代表漏洞评估的目标？</li>
-</ol>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 为了测试系统的反应从而得知威胁</li>
-<li style="list-style: none"><input type="checkbox"> 为了减少的暴露的可能性</li>
-<li style="list-style: none"><input type="checkbox" checked> 为了确定系统的安全态势</li>
-<li style="list-style: none"><input type="checkbox"> 为了分析风险环节策略</li>
-<li></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2169,7 +2270,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -2180,7 +2281,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -2191,7 +2292,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
