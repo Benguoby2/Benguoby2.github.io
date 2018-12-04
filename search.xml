@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Flask安装]]></title>
+    <url>%2F2018%2F12%2F04%2FFlask%E5%AE%89%E8%A3%85%2F</url>
+    <content type="text"><![CDATA[学习过程是完全按照Falsk Web开发这本书进行的 书中的示例代码可以从 git clone https://github.com/miguelgrinberg/flasky.git 通过git来获取，并且使用git checkout 1a 来切换提交历史版本 1a为历史版本笔者使用的IDE是Pycharm，个人认为还是非常好用的。为了不影响本机的其他python环境，书中使用了virtualenv 创建了一个单独的运行环境来编写Flask相关代码]]></content>
+      <tags>
+        <tag>Flask学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Back]]></title>
     <url>%2F2018%2F12%2F04%2FBack-0%2F</url>
     <content type="text"><![CDATA[有段时间没有更新自己的博客了，都快啊忘记发布博客了 =.=，markdown 也忘得差不多了 欸~~~ I am back! 争取每周一更吧 这个是测试页，因为我确实忘记怎么写了]]></content>
