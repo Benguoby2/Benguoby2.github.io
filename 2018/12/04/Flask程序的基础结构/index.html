@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Cyber security intern">
 <meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839from flask import Flaskapp = Flask(__name__)@app.route(&apos;/&apos;)def index():    return &apos;&amp;lt;h1&amp;gt;Hello World!&amp;lt;/h1&amp;gt;&apos;@app.route(&apos;/u">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-04T11:50:01.068Z">
+<meta property="og:updated_time" content="2018-12-04T12:25:34.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flask程序的基础结构">
 <meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839from flask import Flaskapp = Flask(__name__)@app.route(&apos;/&apos;)def index():    return &apos;&amp;lt;h1&amp;gt;Hello World!&amp;lt;/h1&amp;gt;&apos;@app.route(&apos;/u">
@@ -377,8 +377,40 @@
       
         <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'&lt;h1&gt;Hello World!&lt;/h1&gt;'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/user/&lt;name&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">user</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"&lt;h1&gt;Hello &#123;&#125;!"</span>.format(name)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(('/user1/&lt;int:id&gt;'))</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">user_id</span><span class="params">(id)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"&lt;h1&gt;Hello &#123;&#125;!"</span>.format(id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app.run(debug=<span class="keyword">True</span>)</span><br><span class="line">``` </span><br><span class="line">***  </span><br><span class="line">以上是Flask的一个简单应用  </span><br><span class="line">```python</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line">```  </span><br><span class="line">&gt; 初始化程序实例</span><br><span class="line">*** </span><br><span class="line">```python</span><br><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'&lt;h1&gt;Hello World!&lt;/h1&gt;'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/user/&lt;name&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">user</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"&lt;h1&gt;Hello &#123;&#125;!"</span>.format(name)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(('/user1/&lt;int:id&gt;'))</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">user_id</span><span class="params">(id)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"&lt;h1&gt;Hello &#123;&#125;!"</span>.format(id)</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>是Flask的路由，通过装饰器路由到相应的处理函数，</p>
+<p>是Flask的路由，通过装饰器路由到相应的处理函数  </p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th style="text-align:center">双下文</th>
+<th style="text-align:right">说明 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>current_app</td>
+<td style="text-align:center">程序上下文</td>
+<td style="text-align:right">正在运行的Flask程序 </td>
+</tr>
+<tr>
+<td>g</td>
+<td style="text-align:center">程序上下文</td>
+<td style="text-align:right">每次请求重设该值 </td>
+</tr>
+<tr>
+<td>requests</td>
+<td style="text-align:center">请求上下文</td>
+<td style="text-align:right">请求对象，封装了客户端发出的HTTP请求中的内容</td>
+</tr>
+<tr>
+<td>session</td>
+<td style="text-align:center">请求上下文</td>
+<td style="text-align:right">用于存储请求之间需要“记住”的值的字典</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
       
     </div>
@@ -430,6 +462,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/17/docker ospfv2 模拟/" rel="prev" title="docker容器之间使用ospf路由">
+                docker容器之间使用ospf路由 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -522,7 +558,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -544,7 +580,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

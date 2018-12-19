@@ -308,6 +308,149 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/17/docker ospfv2 模拟/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GJYan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://note.youdao.com/yws/api/personal/file/BDFD17C56F234A3A9AA2D87B91DC89B0?method=download&shareKey=668ab47cd1125e256c2b526be5a8b741">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cyber security intern">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/17/docker ospfv2 模拟/" itemprop="url">docker容器之间使用ospf路由</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-17T19:11:38+08:00">
+                2018-12-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>这是在mac里面使用docker quagga容器实现的ospfv2路由</p>
+<blockquote>
+<p>Quagga 是开源的路由软件，支持rip、ospf，bgp等路由协议，且如果熟悉Cisco路由器配置的话，对Quagga的配置过程也会非常熟悉，Quagga的配置过程和Cisco是几乎相同的。</p>
+</blockquote>
+<hr>
+<h2 id="Mac安装docker"><a href="#Mac安装docker" class="headerlink" title="Mac安装docker"></a>Mac安装docker</h2><blockquote>
+<p>mac安装docker非常简单   </p>
+</blockquote>
+<p>​     <a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac" target="_blank" rel="noopener">Docker for Mac 下载地址</a> ，通过该网址可以直接下载，下载前可能需要注册docker </p>
+<h3 id="测试docker是否安装成功"><a href="#测试docker是否安装成功" class="headerlink" title="测试docker是否安装成功"></a>测试docker是否安装成功</h3><ol>
+<li><p>在终端中测试</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Benguoby2deMacBook-Pro:~ Benguoby2$ docker --version</span><br><span class="line"></span><br><span class="line">Docker version <span class="number">18.09</span>.<span class="number">0</span>, build <span class="number">4</span>d60db4</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行一个测试容器，查看输出是否一致 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Benguoby2deMacBook-Pro:~ Benguoby2$ docker run hello-world</span><br><span class="line"></span><br><span class="line">Unable to find image 'hello-world:latest' locally</span><br><span class="line"></span><br><span class="line">latest: Pulling from library/hello-world</span><br><span class="line"></span><br><span class="line">d1725b59e92d: Pull complete </span><br><span class="line"></span><br><span class="line">Digest: sha256:0add3ace90ecb4adbf7777e9aacf18357296e799f81cabc9fde470971e499788</span><br><span class="line"></span><br><span class="line">Status: Downloaded newer image for hello-world:latest</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line"></span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/17/docker ospfv2 模拟/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    <div>
+      
+    </div>
+
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/04/Flask程序的基础结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -381,8 +524,40 @@
           
             <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'&lt;h1&gt;Hello World!&lt;/h1&gt;'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/user/&lt;name&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">user</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"&lt;h1&gt;Hello &#123;&#125;!"</span>.format(name)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(('/user1/&lt;int:id&gt;'))</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">user_id</span><span class="params">(id)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"&lt;h1&gt;Hello &#123;&#125;!"</span>.format(id)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app.run(debug=<span class="keyword">True</span>)</span><br><span class="line">``` </span><br><span class="line">***  </span><br><span class="line">以上是Flask的一个简单应用  </span><br><span class="line">```python</span><br><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line">```  </span><br><span class="line">&gt; 初始化程序实例</span><br><span class="line">*** </span><br><span class="line">```python</span><br><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'&lt;h1&gt;Hello World!&lt;/h1&gt;'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/user/&lt;name&gt;')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">user</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"&lt;h1&gt;Hello &#123;&#125;!"</span>.format(name)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route(('/user1/&lt;int:id&gt;'))</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">user_id</span><span class="params">(id)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"&lt;h1&gt;Hello &#123;&#125;!"</span>.format(id)</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>是Flask的路由，通过装饰器路由到相应的处理函数，</p>
+<p>是Flask的路由，通过装饰器路由到相应的处理函数  </p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th style="text-align:center">双下文</th>
+<th style="text-align:right">说明 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>current_app</td>
+<td style="text-align:center">程序上下文</td>
+<td style="text-align:right">正在运行的Flask程序 </td>
+</tr>
+<tr>
+<td>g</td>
+<td style="text-align:center">程序上下文</td>
+<td style="text-align:right">每次请求重设该值 </td>
+</tr>
+<tr>
+<td>requests</td>
+<td style="text-align:center">请求上下文</td>
+<td style="text-align:right">请求对象，封装了客户端发出的HTTP请求中的内容</td>
+</tr>
+<tr>
+<td>session</td>
+<td style="text-align:center">请求上下文</td>
+<td style="text-align:right">用于存储请求之间需要“记住”的值的字典</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
           
         
@@ -1615,167 +1790,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/Security-考前第六章错题集-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="GJYan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://note.youdao.com/yws/api/personal/file/BDFD17C56F234A3A9AA2D87B91DC89B0?method=download&shareKey=668ab47cd1125e256c2b526be5a8b741">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cyber security intern">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/12/Security-考前第六章错题集-2/" itemprop="url">Security+ 考前第六章错题集-2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T08:42:08+08:00">
-                2018-09-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Security/" itemprop="url" rel="index">
-                    <span itemprop="name">Security+</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>下列哪一项协议用于验证客户端与服务器的数字证书？  [分值：5]</li>
-</ol>
-<ul>
-<li style="list-style: none"><input type="checkbox"> PEAP(受保护的可扩展的身份验证协议)</li>
-<li style="list-style: none"><input type="checkbox"> DNS</li>
-<li style="list-style: none"><input type="checkbox" checked> TLS</li>
-<li style="list-style: none"><input type="checkbox"> ICMP</li>
-</ul>
-<hr>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-      
-    </div>
-
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1821,7 +1840,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1843,7 +1862,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
